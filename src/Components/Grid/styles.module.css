@@ -1,0 +1,19 @@
+@value sizes: "../../cssvariables/media.module.css";
+@value tablet, desktop from sizes;
+
+.grid {
+  display: grid;
+  gap: 20px;
+}
+
+@media tablet {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media desktop {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
