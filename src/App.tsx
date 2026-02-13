@@ -1,5 +1,7 @@
+import { H } from "./Components";
+
 const App = () => {
-  return <h1>App</h1>;
+  return <H level={1}>App</H>;
 };
 
 export default App;

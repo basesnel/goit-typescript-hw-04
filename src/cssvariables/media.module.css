@@ -1,0 +1,4 @@
+@value mobile: screen and (min-width : 320px);
+@value smartphone: screen and (min-width : 480px);
+@value tablet: screen and (min-width : 768px);
+@value desktop: screen and (min-width : 1280px);

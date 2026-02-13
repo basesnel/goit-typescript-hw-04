@@ -1,0 +1,35 @@
+@value heading1: 30px;
+@value heading1-mobile: 32px;
+@value heading1-smartphone: 34px;
+@value heading1-tablet: 36px;
+@value heading1-desktop: 38px;
+
+@value heading2: 24px;
+@value heading2-mobile: 26px;
+@value heading2-smartphone: 28px;
+@value heading2-tablet: 30px;
+@value heading2-desktop: 32px;
+
+@value heading3: 22px;
+@value heading3-mobile: 24px;
+@value heading3-smartphone: 26px;
+@value heading3-tablet: 28px;
+@value heading3-desktop: 30px;
+
+@value heading4: 20px;
+@value heading4-mobile: 22px;
+@value heading4-smartphone: 24px;
+@value heading4-tablet: 26px;
+@value heading4-desktop: 28px;
+
+@value heading5: 18px;
+@value heading5-mobile: 20px;
+@value heading5-smartphone: 22px;
+@value heading5-tablet: 24px;
+@value heading5-desktop: 26px;
+
+@value heading6: 16px;
+@value heading6-mobile: 18px;
+@value heading6-smartphone: 20px;
+@value heading6-tablet: 22px;
+@value heading6-desktop: 24px;
