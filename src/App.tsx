@@ -1,7 +1,11 @@
-import { H } from "./Components";
+import { Main, H } from "./Components";
 
 const App = () => {
-  return <H level={1}>App</H>;
+  return (
+    <Main>
+      <H level={1}>Goit typescript tasks on React</H>
+    </Main>
+  );
 };
 
 export default App;

@@ -1,4 +1,5 @@
-// import { useContext } from "react";
+import { useContext } from "react";
+import { mainContext } from "../../contexts";
 // import { mainContext, cardContext } from "contexts";
 
 import styles from "./styles.module.css";
@@ -13,12 +14,18 @@ const H = (props: Hprops) => {
   const { heading01, heading02, heading03, heading04, heading05, heading06 } =
     styles;
 
+  const isMain = useContext(mainContext);
+
   switch (level) {
     case 0:
       throw Error("Heading must be inside a section!");
 
     case 1:
-      return <h1 className={heading01}>{children}</h1>;
+      return (
+        <h1 className={`${heading01} ${isMain ? styles.pageTitle : ""}`}>
+          {children}
+        </h1>
+      );
 
     case 2:
       return <h2 className={heading02}>{children}</h2>;
