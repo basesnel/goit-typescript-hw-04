@@ -1,9 +1,11 @@
-import { Main, H } from "./Components";
+import { Main, H, Container } from "./Components";
 
 const App = () => {
   return (
     <Main>
-      <H level={1}>Goit typescript tasks on React</H>
+      <Container>
+        <H level={1}>GoIt: Typescript tasks on React</H>
+      </Container>
     </Main>
   );
 };

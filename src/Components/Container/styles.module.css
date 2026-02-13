@@ -1,0 +1,31 @@
+@value sizes: "../../cssvariables/media.module.css";
+@value mobile, smartphone, tablet, desktop from sizes;
+
+.container {
+  margin: 0 auto 20px;
+  padding: 0 10px;
+}
+
+@media mobile {
+  .container {
+    max-width: 300px;
+  }
+}
+
+@media smartphone {
+  .container {
+    max-width: 420px;
+  }
+}
+
+@media tablet {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media desktop {
+  .container {
+    max-width: 1200px;
+  }
+}
