@@ -1,4 +1,4 @@
-import { Main, H, Container, Grid } from "./Components";
+import { Main, H, Container, Grid, Card } from "./Components";
 
 const App = () => {
   return (
@@ -8,6 +8,9 @@ const App = () => {
       </Container>
       <Container>
         <Grid>
+          <Card title="Task 1">
+            <p>There will be task 1</p>
+          </Card>
           {[...Array(4)].map((_, i) => (
             <div
               key={i}

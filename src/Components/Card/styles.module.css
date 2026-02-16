@@ -1,0 +1,111 @@
+@value sizes: "../../cssvariables/media.module.css";
+@value mobile, smartphone from sizes;
+/* @value title02, title03, title04 from "../Title/styles.module.css"; */
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  border-radius: 10px;
+  padding: 1px;
+  background-color: var(--color-light);
+  transition: var(--my-transition);
+  overflow: hidden;
+}
+
+.card:hover {
+  box-shadow:
+    0px 1px 1px rgba(0, 0, 0, 0.12),
+    0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.06);
+  transform: scale(1.02);
+  z-index: 200;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  border-radius: 9px 9px 0 0;
+  padding: 0 9px;
+  background-color: var(--color-logolight);
+}
+
+.content {
+  flex-grow: 1;
+  border-radius: 0 0 9px 9px;
+  padding: 9px;
+  background-color: var(--color-logolight);
+}
+
+.card .title02 {
+  padding: 0;
+  font-size: var(--fs-text-mobile);
+  font-weight: 700;
+  text-transform: lowercase;
+  text-align: center;
+  color: var(--color-text);
+  opacity: 0.85;
+  transition: var(--my-transition);
+}
+
+.card:hover .title02 {
+  opacity: 1;
+}
+
+@media mobile {
+  .card .title02 {
+    font-size: var(--fs-text-smartphone);
+  }
+}
+
+@media smartphone {
+  .card .title02 {
+    font-size: var(--fs-text-tablet);
+  }
+}
+
+.card .title03 {
+  padding: 0;
+  margin-bottom: 10px;
+  font-size: var(--fs-text-mobile);
+  font-weight: 700;
+  text-transform: lowercase;
+  text-align: center;
+  color: var(--color-text);
+  opacity: 0.85;
+  transition: var(--my-transition);
+}
+
+.card:hover .title03 {
+  opacity: 1;
+}
+
+.card .title04 {
+  padding: 0;
+  margin-bottom: 10px;
+  font-weight: 700;
+  text-transform: capitalize;
+  text-align: left;
+  color: var(--color-text);
+  opacity: 0.85;
+  transition: var(--my-transition);
+}
+
+.card:hover .title04 {
+  opacity: 1;
+}
+
+@media mobile {
+  .card .title03 {
+    font-size: var(--fs-text-smartphone);
+  }
+}
+
+@media smartphone {
+  .card .title03 {
+    font-size: var(--fs-text-tablet);
+  }
+}
