@@ -1,6 +1,9 @@
 @value sizes: "../../cssvariables/media.module.css";
 @value mobile, smartphone from sizes;
-/* @value title02, title03, title04 from "../Title/styles.module.css"; */
+@value colors: "../../cssvariables/color.module.css";
+@value color-light, color-white from colors;
+@value animations: "../../cssvariables/animation.module.css";
+@value transition from animations;
 
 .card {
   position: relative;
@@ -9,8 +12,8 @@
   gap: 1px;
   border-radius: 10px;
   padding: 1px;
-  background-color: var(--color-light);
-  transition: var(--my-transition);
+  background-color: color-light;
+  transition: transition;
   overflow: hidden;
 }
 
@@ -30,14 +33,14 @@
   height: 50px;
   border-radius: 9px 9px 0 0;
   padding: 0 9px;
-  background-color: var(--color-logolight);
+  background-color: color-white;
 }
 
 .content {
   flex-grow: 1;
   border-radius: 0 0 9px 9px;
   padding: 9px;
-  background-color: var(--color-logolight);
+  background-color: color-white;
 }
 
 .card .title02 {

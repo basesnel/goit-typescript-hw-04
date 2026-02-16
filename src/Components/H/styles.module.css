@@ -1,5 +1,6 @@
 @value mediasizes: "../../cssvariables/media.module.css";
 @value fsheadings: "../../cssvariables/fsheading.module.css";
+@value fstexts: "../../cssvariables/fstext.module.css";
 @value colors: "../../cssvariables/color.module.css";
 @value mobile, smartphone, tablet, desktop from mediasizes;
 @value heading1, heading1-mobile, heading1-smartphone, heading1-tablet, heading1-desktop from fsheadings;
@@ -8,7 +9,8 @@
 @value heading4, heading4-mobile, heading4-smartphone, heading4-tablet, heading4-desktop from fsheadings;
 @value heading5, heading5-mobile, heading5-smartphone, heading5-tablet, heading5-desktop from fsheadings;
 @value heading6, heading6-mobile, heading6-smartphone, heading6-tablet, heading6-desktop from fsheadings;
-@value color-dark from colors;
+@value fstext, fstext-smartphone from fstexts;
+@value color-dark, color-text from colors;
 
 .heading {
   color: color-dark;
@@ -87,23 +89,26 @@
 }
 
 .pageTitle {
+  composes: heading01;
   padding-bottom: 10px;
   border-bottom: 1px solid color-dark;
 }
 
-.cardTitle02 {
+.cardTitle {
+  composes: heading02;
   padding: 0;
   margin-bottom: 0;
-  font-size: var(--fs-text-mobile);
+  font-size: fstext;
   font-weight: 700;
-  text-transform: lowercase;
-  text-align: center;
-  color: var(--color-text);
-  opacity: 0.85;
-  transition: var(--my-transition);
+  color: color-text;
+}
+
+.cardTitle::before {
+  content: none;
 }
 
 .cardTitle03 {
+  composes: heading03;
   padding: 0;
   margin-bottom: 10px;
   font-size: var(--fs-text-mobile);
@@ -115,6 +120,7 @@
 }
 
 .cardTitle04 {
+  composes: heading04;
   padding: 0;
   margin-bottom: 10px;
   font-size: var(--fs-text-mobile);
@@ -176,6 +182,11 @@
   .heading06::before {
     height: heading6-mobile;
   }
+
+  .cardTitle {
+    margin-bottom: 0;
+    font-size: fstext;
+  }
 }
 
 @media smartphone {
@@ -232,9 +243,9 @@
     height: heading6-smartphone;
   }
 
-  .cardTitle02 {
+  .cardTitle {
     margin-bottom: 0;
-    font-size: var(--fs-text-smartphone);
+    font-size: fstext-smartphone;
   }
 
   .cardTitle03 {
@@ -298,6 +309,11 @@
 
   .heading06::before {
     height: heading6-tablet;
+  }
+
+  .cardTitle {
+    margin-bottom: 0;
+    font-size: fstext-smartphone;
   }
 }
 
@@ -370,9 +386,9 @@
     height: heading6-desktop;
   }
 
-  .cardTitle02 {
+  .cardTitle {
     margin-bottom: 0;
-    font-size: var(--fs-text-tablet);
+    font-size: fstext-smartphone;
   }
 
   .cardTitle03 {
