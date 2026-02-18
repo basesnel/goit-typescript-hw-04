@@ -1,5 +1,5 @@
+import H from "@components/H";
 import { cardContext } from "../../contexts";
-import { H } from "../../Components";
 
 import styles from "./styles.module.css";
 

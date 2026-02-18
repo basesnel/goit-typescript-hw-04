@@ -1,4 +1,8 @@
-import { Main, H, Container, Grid, Card } from "./Components";
+import Main from "@components/Main";
+import H from "@components/H";
+import Container from "@components/Container";
+import Grid from "@components/Grid";
+import Card from "@components/Card";
 
 const App = () => {
   return (
