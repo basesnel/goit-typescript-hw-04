@@ -1,4 +1,4 @@
-import { mainContext } from "@contexts";
+import { mainContext } from "@contexts/index";
 
 type MainProps = {
   children: React.ReactNode;
