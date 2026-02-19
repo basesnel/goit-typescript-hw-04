@@ -24,12 +24,12 @@
     "noUncheckedSideEffectImports": true,
 
     /* Aliases */
-    "baseUrl": ".",
+    "baseUrl": "./",
     "paths": {
-      "@/*": ["./src/*"],
-      "@components/*": ["./src/components/*"],
-      "@contexts/*": ["./src/contexts/*"]
+      "@components/*": ["src/components/*"],
+      "@contexts/*": ["src/contexts/*"],
+      "@/*": ["src/*"]
     }
   },
-  "include": ["src"]
+  "include": ["src/**/*", "src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx"]
 }
