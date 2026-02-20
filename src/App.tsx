@@ -3,7 +3,7 @@
 // import Grid from "@components/Grid";
 // import Card from "@components/Card";
 // import Main from "@components/Main";
-import { Main, Container, Grid, Card, H } from "@components/index";
+import { Card, Container, Grid, H, Main } from "@components";
 
 const App = () => {
   return (

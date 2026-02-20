@@ -26,8 +26,9 @@
     /* Aliases */
     "baseUrl": "src",
     "paths": {
+      "@components/": ["components/*"],
       "@components": ["components/index.ts"],
-      "@contexts": ["contexts/index.ts"],
+      "@contexts/*": ["contexts/*"],
       "@/*": ["*"]
     }
   },

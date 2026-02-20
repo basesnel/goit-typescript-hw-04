@@ -23,13 +23,19 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
 
+    // Always include these settings
+    // "composite": true,
+    // "declaration": true,
+    // "declarationMap": true,
+    // "sourceMap": true,
+
     /* Aliases */
-    "baseUrl": "src",
+    "baseUrl": "./",
     "paths": {
-      "@components": ["components/index.ts"],
-      "@contexts": ["contexts/index.ts"],
-      "@/*": ["*"]
+      "@components/*": ["src/components/*"],
+      "@contexts/*": ["src/contexts/*"],
+      "@/*": ["src/*"]
     }
   },
-  "include": ["src"]
+  "include": ["src/**/*", "src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx"]
 }
