@@ -1,9 +1,5 @@
-// import H from "@components/H";
-// import Container from "@components/Container";
-// import Grid from "@components/Grid";
-// import Card from "@components/Card";
-// import Main from "@components/Main";
-import { Card, Container, Grid, H, Main } from "@components";
+import { Card, Container, Grid, H, HideOverFlow, Main } from "@components";
+import { Observer } from "./homeworks/1";
 
 const App = () => {
   return (
@@ -13,8 +9,20 @@ const App = () => {
       </Container>
       <Container>
         <Grid>
-          <Card title="Task 1">
-            <p>There will be task 1</p>
+          <Card title={<H level={2}>task 1</H>}>
+            <Observer
+              onContentEndVisible={() => {
+                console.log("End is reached.");
+              }}
+            >
+              <HideOverFlow>
+                <ul>
+                  {[...Array(40)].map((_, i) => (
+                    <li key={i}>{`Item ${i + 1}`}</li>
+                  ))}
+                </ul>
+              </HideOverFlow>
+            </Observer>
           </Card>
           {[...Array(4)].map((_, i) => (
             <div

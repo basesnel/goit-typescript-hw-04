@@ -10,7 +10,7 @@
 @value heading5, heading5-mobile, heading5-smartphone, heading5-tablet, heading5-desktop from fsheadings;
 @value heading6, heading6-mobile, heading6-smartphone, heading6-tablet, heading6-desktop from fsheadings;
 @value fstext, fstext-smartphone from fstexts;
-@value color-dark, color-text from colors;
+@value color-text, color-dark from colors;
 
 .heading {
   color: color-dark;
@@ -95,40 +95,11 @@
 }
 
 .cardTitle {
-  composes: heading02;
-  padding: 0;
-  margin-bottom: 0;
   font-size: fstext;
   font-weight: 700;
-  color: color-text;
-}
-
-.cardTitle::before {
-  content: none;
-}
-
-.cardTitle03 {
-  composes: heading03;
-  padding: 0;
-  margin-bottom: 10px;
-  font-size: var(--fs-text-mobile);
-  font-weight: 700;
+  line-height: 1.5;
   text-align: center;
-  color: var(--color-text);
-  opacity: 0.85;
-  transition: var(--my-transition);
-}
-
-.cardTitle04 {
-  composes: heading04;
-  padding: 0;
-  margin-bottom: 10px;
-  font-size: var(--fs-text-mobile);
-  font-weight: 700;
-  text-align: initial;
-  color: var(--color-text);
-  opacity: 0.85;
-  transition: var(--my-transition);
+  color: color-text;
 }
 
 @media mobile {
@@ -181,11 +152,6 @@
 
   .heading06::before {
     height: heading6-mobile;
-  }
-
-  .cardTitle {
-    margin-bottom: 0;
-    font-size: fstext;
   }
 }
 
@@ -244,16 +210,7 @@
   }
 
   .cardTitle {
-    margin-bottom: 0;
     font-size: fstext-smartphone;
-  }
-
-  .cardTitle03 {
-    font-size: var(--fs-text-smartphone);
-  }
-
-  .cardTitle04 {
-    font-size: var(--fs-text-smartphone);
   }
 }
 
@@ -309,11 +266,6 @@
 
   .heading06::before {
     height: heading6-tablet;
-  }
-
-  .cardTitle {
-    margin-bottom: 0;
-    font-size: fstext-smartphone;
   }
 }
 
@@ -384,18 +336,5 @@
 
   .heading06::before {
     height: heading6-desktop;
-  }
-
-  .cardTitle {
-    margin-bottom: 0;
-    font-size: fstext-smartphone;
-  }
-
-  .cardTitle03 {
-    font-size: var(--fs-text-tablet);
-  }
-
-  .cardTitle04 {
-    font-size: var(--fs-text-tablet);
   }
 }

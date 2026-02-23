@@ -1,6 +1,5 @@
 import { useContext } from "react";
-// import { mainContext, cardContext } from "../../contexts";
-import { cardContext, mainContext } from "@contexts/index";
+import { cardContext, mainContext } from "@contexts";
 
 import styles from "./styles.module.css";
 
