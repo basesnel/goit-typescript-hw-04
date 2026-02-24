@@ -4,6 +4,7 @@ import {
   Grid,
   H,
   Item,
+  ItemFlex,
   ItemText,
   List,
   Main,
@@ -27,7 +28,9 @@ const App = () => {
               <List message="There is no items">
                 {[...Array(40)].map((_, i) => (
                   <Item key={i}>
-                    <ItemText>{`Item ${i + 1}`}</ItemText>
+                    <ItemFlex>
+                      <ItemText>{`Item ${i + 1}`}</ItemText>
+                    </ItemFlex>
                   </Item>
                 ))}
               </List>

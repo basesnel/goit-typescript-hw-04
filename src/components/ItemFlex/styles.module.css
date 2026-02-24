@@ -1,0 +1,11 @@
+.flexed {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 6px 12px;
+}
+
+.flexedSpaceBetween {
+  composes: flexed;
+  justify-content: space-between;
+}
