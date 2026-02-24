@@ -1,0 +1,32 @@
+@value colors: "../../cssvariables/color.module.css";
+@value animations: "../../cssvariables/animation.module.css";
+@value color-light, color-logo-light, color-accent-bg from colors;
+@value transition from animations;
+
+.item {
+  transition: transition;
+}
+
+.item:nth-child(odd) {
+  background-color: color-light;
+}
+
+.item:nth-child(even) {
+  background-color: color-logo-light;
+}
+
+.item:hover {
+  background-color: color-accent-bg;
+}
+
+.item:first-child {
+  border-radius: 3px 3px 0 0;
+}
+
+.item:last-child {
+  border-radius: 0 0 3px 3px;
+}
+
+.item:only-child {
+  border-radius: 3px;
+}
