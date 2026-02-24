@@ -1,0 +1,32 @@
+@value colors: "../../cssvariables/color.module.css";
+@value color-text from colors;
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  padding: 1px;
+  background-color: color-text;
+  overflow: hidden;
+}
+
+.list:last-child {
+  margin-bottom: 0;
+}
+
+.list:only-child {
+  margin-bottom: 0;
+}
+
+.message {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  border: 1px solid color-text;
+  border-radius: 4px;
+  padding: 10px;
+  text-align: center;
+  color: color-text;
+}
