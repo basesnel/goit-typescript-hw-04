@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import { HideOverFlow } from "@components";
 
 type Props = {
   children: React.ReactNode;
@@ -8,20 +9,20 @@ type Props = {
 type Options = {
   rootMargin: string;
   threshold: number;
-  root: null;
+  root: HTMLElement | null | undefined;
 };
 
 // Опишіть Props
 export function Observer({ children, onContentEndVisible }: Props) {
   // Вкажіть правильний тип для useRef зверніть увагу, в який DOM елемент ми його передаємо
-  const endContentRef = useRef(null);
+  const endContentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     // Вкажіть правильний тип для options, підказка, клас також можна вказувати як тип
     const options: Options = {
       rootMargin: "0px",
       threshold: 1.0,
-      root: null,
+      root: endContentRef.current?.parentElement,
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -43,9 +44,9 @@ export function Observer({ children, onContentEndVisible }: Props) {
   }, [onContentEndVisible]);
 
   return (
-    <div>
+    <HideOverFlow>
       {children}
       <div ref={endContentRef} />
-    </div>
+    </HideOverFlow>
   );
 }

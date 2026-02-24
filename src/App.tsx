@@ -1,4 +1,4 @@
-import { Card, Container, Grid, H, HideOverFlow, Main } from "@components";
+import { Card, Container, Grid, H, Main } from "@components";
 import { Observer } from "./homeworks/1";
 
 const App = () => {
@@ -15,13 +15,13 @@ const App = () => {
                 console.log("End is reached.");
               }}
             >
-              <HideOverFlow>
-                <ul>
-                  {[...Array(40)].map((_, i) => (
-                    <li key={i}>{`Item ${i + 1}`}</li>
-                  ))}
-                </ul>
-              </HideOverFlow>
+              {/* <HideOverFlow> */}
+              <ul>
+                {[...Array(40)].map((_, i) => (
+                  <li key={i}>{`Item ${i + 1}`}</li>
+                ))}
+              </ul>
+              {/* </HideOverFlow> */}
             </Observer>
           </Card>
           {[...Array(4)].map((_, i) => (
