@@ -1,4 +1,13 @@
-import { Card, Container, Grid, H, Main } from "@components";
+import {
+  Card,
+  Container,
+  Grid,
+  H,
+  Item,
+  ItemText,
+  List,
+  Main,
+} from "@components";
 import { Observer } from "./homeworks/1";
 
 const App = () => {
@@ -15,13 +24,13 @@ const App = () => {
                 console.log("End is reached.");
               }}
             >
-              {/* <HideOverFlow> */}
-              <ul>
+              <List message="There is no items">
                 {[...Array(40)].map((_, i) => (
-                  <li key={i}>{`Item ${i + 1}`}</li>
+                  <Item key={i}>
+                    <ItemText>{`Item ${i + 1}`}</ItemText>
+                  </Item>
                 ))}
-              </ul>
-              {/* </HideOverFlow> */}
+              </List>
             </Observer>
           </Card>
           {[...Array(4)].map((_, i) => (

@@ -1,0 +1,25 @@
+@value sizes: "../../cssvariables/media.module.css";
+@value fstexts: "../../cssvariables/fstext.module.css";
+@value colors: "../../cssvariables/color.module.css";
+@value animations: "../../cssvariables/animation.module.css";
+@value item from "../Item/styles.module.css";
+@value smartphone from sizes;
+@value fstext, fstext-smartphone from fstexts;
+@value color-text, color-dark from colors;
+@value transition from animations;
+
+.content {
+  font-size: fstext;
+  color: color-text;
+  transition: transition;
+}
+
+.item:hover .content {
+  color: color-dark;
+}
+
+@media smartphone {
+  .content {
+    font-size: fstext-smartphone;
+  }
+}
