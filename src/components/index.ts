@@ -8,6 +8,7 @@ import ItemFlex from "./ItemFlex";
 import ItemText from "./ItemText";
 import List from "./List";
 import Main from "./Main";
+import Observer from "./Observer";
 
 export {
   Card,
@@ -20,4 +21,5 @@ export {
   ItemText,
   List,
   Main,
+  Observer,
 };

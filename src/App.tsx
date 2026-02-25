@@ -1,15 +1,5 @@
-import {
-  Card,
-  Container,
-  Grid,
-  H,
-  Item,
-  ItemFlex,
-  ItemText,
-  List,
-  Main,
-} from "@components";
-import { Observer } from "./homeworks/1";
+import { Card, Container, Grid, H, Main } from "@components";
+import { Task01 } from "./homeworks/1";
 
 const App = () => {
   return (
@@ -20,21 +10,7 @@ const App = () => {
       <Container>
         <Grid>
           <Card title={<H level={2}>task 1</H>}>
-            <Observer
-              onContentEndVisible={() => {
-                console.log("End is reached.");
-              }}
-            >
-              <List message="There is no items">
-                {[...Array(40)].map((_, i) => (
-                  <Item key={i}>
-                    <ItemFlex>
-                      <ItemText>{`Item ${i + 1}`}</ItemText>
-                    </ItemFlex>
-                  </Item>
-                ))}
-              </List>
-            </Observer>
+            <Task01 />
           </Card>
           {[...Array(4)].map((_, i) => (
             <div
