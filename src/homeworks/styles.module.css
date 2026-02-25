@@ -1,0 +1,14 @@
+@value colors: "../cssvariables/color.module.css";
+@value color-dark, color-light from colors;
+
+.notification {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  color: color-light;
+  background-color: color-dark;
+  opacity: 0.8;
+}
