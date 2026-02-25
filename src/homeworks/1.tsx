@@ -4,7 +4,7 @@ import { Item, ItemFlex, ItemText, List, Observer } from "@components";
 import styles from "./styles.module.css";
 
 const Task01 = () => {
-  const [note, useNote] = useState(false);
+  const [note, useNote] = useState<boolean>(false);
 
   const { notification } = styles;
 
@@ -17,7 +17,6 @@ const Task01 = () => {
       )}
       <Observer
         onContentEndVisible={() => {
-          console.log("End is reached.");
           useNote(true);
         }}
       >
