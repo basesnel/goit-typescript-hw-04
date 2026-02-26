@@ -11,8 +11,6 @@ type Options = {
   rootMargin: string;
   threshold: number;
   root: HTMLElement | null | undefined;
-  // trackVisibility: boolean;
-  // delay: number;
 };
 
 // Опишіть Props
@@ -32,19 +30,21 @@ const Observer = ({
       root: endContentRef.current?.parentElement,
     };
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
+    const observerCollback = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry: IntersectionObserverEntry) => {
         if (entry.isIntersecting) {
           if (entry.intersectionRatio > 0) {
             onContentEndVisible();
-            console.log("End of section.");
+            console.log("End is in view.");
           }
         } else {
           onNoContentEndVisible();
-          console.log("There is no end.");
+          console.log("End isn't in view.");
         }
       });
-    }, options);
+    };
+
+    const observer = new IntersectionObserver(observerCollback, options);
 
     if (endContentRef.current) {
       observer.observe(endContentRef.current);
