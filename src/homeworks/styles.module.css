@@ -1,15 +1,28 @@
+@value sizes: "../cssvariables/media.module.css";
+@value fstexts: "../cssvariables/fstext.module.css";
+@value smartphone from sizes;
 @value colors: "../cssvariables/color.module.css";
 @value color-dark, color-light from colors;
+@value fstext, fstext-smartphone from fstexts;
 
 .notification {
   position: absolute;
-  top: 70px;
-  left: 0;
+  top: 80px;
+  left: 50%;
+  transform: translate(-50%, 0);
   z-index: 300;
-  width: 100%;
-  padding: 10px;
+  width: 90%;
+  padding: 30px 10px;
+  border: 1px solid color-dark;
+  border-radius: 10px;
+  font-size: fstext;
   text-align: center;
-  color: color-light;
-  background-color: color-dark;
+  background-color: color-light;
+  color: color-dark;
   opacity: 0.8;
+}
+@media smartphone {
+  .content {
+    font-size: fstext-smartphone;
+  }
 }
