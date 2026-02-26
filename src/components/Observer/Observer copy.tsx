@@ -4,44 +4,32 @@ import { HideOverFlow } from "@components";
 type Props = {
   children: React.ReactNode;
   onContentEndVisible: () => void;
-  onNoContentEndVisible: () => void;
 };
 
 type Options = {
   rootMargin: string;
   threshold: number;
   root: HTMLElement | null | undefined;
-  // trackVisibility: boolean;
-  // delay: number;
 };
 
 // Опишіть Props
-const Observer = ({
-  children,
-  onContentEndVisible,
-  onNoContentEndVisible,
-}: Props) => {
+const Observer = ({ children, onContentEndVisible }: Props) => {
   // Вкажіть правильний тип для useRef зверніть увагу, в який DOM елемент ми його передаємо
   const endContentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     // Вкажіть правильний тип для options, підказка, клас також можна вказувати як тип
     const options: Options = {
-      rootMargin: "0px 0px 1px 0px",
-      threshold: 0,
+      rootMargin: "0px",
+      threshold: 1.0,
       root: endContentRef.current?.parentElement,
     };
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          if (entry.intersectionRatio > 0) {
-            onContentEndVisible();
-            console.log("End of section.");
-          }
-        } else {
-          onNoContentEndVisible();
-          console.log("There is no end.");
+        if (entry.intersectionRatio > 0) {
+          onContentEndVisible();
+          observer.disconnect();
         }
       });
     }, options);

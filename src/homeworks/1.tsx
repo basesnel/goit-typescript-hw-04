@@ -19,6 +19,9 @@ const Task01 = () => {
         onContentEndVisible={() => {
           useNote(true);
         }}
+        onNoContentEndVisible={() => {
+          useNote(false);
+        }}
       >
         <List message="There is no items">
           {[...Array(30)].map((_, i) => (
