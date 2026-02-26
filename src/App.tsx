@@ -1,5 +1,5 @@
 import { Card, Container, Grid, H, Main } from "@components";
-import { Task01 } from "./homeworks/1";
+import { Task01 } from "./homeworks/Task01/Task01";
 
 const App = () => {
   return (

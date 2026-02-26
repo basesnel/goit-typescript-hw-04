@@ -1,7 +1,7 @@
-@value sizes: "../cssvariables/media.module.css";
-@value fstexts: "../cssvariables/fstext.module.css";
+@value sizes: "../../cssvariables/media.module.css";
+@value fstexts: "../../cssvariables/fstext.module.css";
+@value colors: "../../cssvariables/color.module.css";
 @value smartphone from sizes;
-@value colors: "../cssvariables/color.module.css";
 @value color-dark, color-light from colors;
 @value fstext, fstext-smartphone from fstexts;
 
