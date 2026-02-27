@@ -1,12 +1,10 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import { HideOverFlow } from "@components";
-
-import styles from "./styles.module.css";
 
 type Props = {
   children: React.ReactNode;
-  // onContentEndVisible: () => void;
-  // onNoContentEndVisible: () => void;
+  onContentEndVisible: () => void;
+  onNoContentEndVisible: () => void;
 };
 
 type Options = {
@@ -18,15 +16,11 @@ type Options = {
 // Опишіть Props
 const Observer = ({
   children,
-  // onContentEndVisible,
-  // onNoContentEndVisible,
+  onContentEndVisible,
+  onNoContentEndVisible,
 }: Props) => {
   // Вкажіть правильний тип для useRef зверніть увагу, в який DOM елемент ми його передаємо
   const endContentRef = useRef<HTMLDivElement>(null);
-
-  const [note, useNote] = useState<boolean>(false);
-
-  const { wrapped, notification } = styles;
 
   useEffect(() => {
     // Вкажіть правильний тип для options, підказка, клас також можна вказувати як тип
@@ -34,16 +28,6 @@ const Observer = ({
       rootMargin: "0px 0px 1px 0px",
       threshold: 0,
       root: endContentRef.current?.parentElement,
-    };
-
-    const onContentEndVisible = () => {
-      useNote(true);
-      console.log("End is in view.");
-    };
-
-    const onNoContentEndVisible = () => {
-      useNote(false);
-      console.log("End isn't in view.");
     };
 
     const observerCollback = (entries: IntersectionObserverEntry[]) => {
@@ -67,20 +51,13 @@ const Observer = ({
     return () => {
       observer.disconnect();
     };
-  }, []);
+  }, [onContentEndVisible]);
 
   return (
-    <div className={wrapped}>
-      {note && (
-        <div className={notification}>
-          <span>End of list is reached</span>
-        </div>
-      )}
-      <HideOverFlow>
-        <div>{children}</div>
-        <div ref={endContentRef} />
-      </HideOverFlow>
-    </div>
+    <HideOverFlow>
+      <div>{children}</div>
+      <div ref={endContentRef} />
+    </HideOverFlow>
   );
 };
 
