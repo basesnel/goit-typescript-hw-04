@@ -31,9 +31,9 @@ const ObserverV1 = ({ children, onContentEndVisible }: Props) => {
           if (entry.isIntersecting) {
             if (entry.intersectionRatio > 0) {
               onContentEndVisible();
-              observer.unobserve(entry.target);
-              observer.disconnect();
             }
+            observer.unobserve(entry.target);
+            observer.disconnect();
           }
         });
       },
