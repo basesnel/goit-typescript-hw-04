@@ -35,11 +35,9 @@ const Observer = ({
         if (entry.isIntersecting) {
           if (entry.intersectionRatio > 0) {
             onContentEndVisible();
-            console.log("End is in view.");
           }
         } else {
           onNoContentEndVisible();
-          console.log("End isn't in view.");
         }
       });
     };

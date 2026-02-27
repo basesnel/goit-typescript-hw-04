@@ -11,16 +11,18 @@ const Task01 = () => {
   return (
     <>
       {note && (
-        <div className={notification} onClick={() => useNote(false)}>
+        <div className={notification}>
           <span>End of list is reached</span>
         </div>
       )}
       <Observer
         onContentEndVisible={() => {
           useNote(true);
+          console.log("End is in view.");
         }}
         onNoContentEndVisible={() => {
           useNote(false);
+          console.log("End isn't in view.");
         }}
       >
         <List message="There is no items">
