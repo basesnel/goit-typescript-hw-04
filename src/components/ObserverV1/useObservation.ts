@@ -1,4 +1,4 @@
-import { useEffect, useState, type RefObject } from "react";
+import { useEffect, type RefObject } from "react";
 
 type Options = {
   rootMargin: string;
@@ -6,24 +6,15 @@ type Options = {
   root: HTMLElement | null | undefined;
 };
 
-const useObservation = (target: RefObject<HTMLDivElement | null>): boolean => {
-  const [notify, useNotify] = useState<boolean>(false);
-
+const useObservation = (
+  target: RefObject<HTMLDivElement | null>,
+  onContentEndVisible: () => void,
+) => {
   useEffect(() => {
     const options: Options = {
       rootMargin: "0px 0px 1px 0px",
-      threshold: 0,
+      threshold: 1.0,
       root: target.current?.parentElement,
-    };
-
-    const onContentEndVisible = () => {
-      useNotify(true);
-      console.log("End is in view.");
-    };
-
-    const onNoContentEndVisible = () => {
-      useNotify(false);
-      console.log("End isn't in view.");
     };
 
     const observerCollback = (entries: IntersectionObserverEntry[]): void => {
@@ -32,8 +23,8 @@ const useObservation = (target: RefObject<HTMLDivElement | null>): boolean => {
           if (entry.intersectionRatio > 0) {
             onContentEndVisible();
           }
-        } else {
-          onNoContentEndVisible();
+          observer.unobserve(entry.target);
+          observer.disconnect();
         }
       });
     };
@@ -47,9 +38,7 @@ const useObservation = (target: RefObject<HTMLDivElement | null>): boolean => {
     return () => {
       observer.disconnect();
     };
-  }, []);
-
-  return notify;
+  }, [onContentEndVisible]);
 };
 
 export { useObservation };

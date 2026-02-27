@@ -1,53 +1,16 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import { HideOverFlow } from "@components";
+import { useObservation } from "./useObservation";
 
 type Props = {
   children: React.ReactNode;
   onContentEndVisible: () => void;
 };
 
-type Options = {
-  rootMargin: string;
-  threshold: number;
-  root: HTMLElement | null | undefined;
-};
-
-// Опишіть Props
 const ObserverV1 = ({ children, onContentEndVisible }: Props) => {
-  // Вкажіть правильний тип для useRef зверніть увагу, в який DOM елемент ми його передаємо
   const endContentRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    // Вкажіть правильний тип для options, підказка, клас також можна вказувати як тип
-    const options: Options = {
-      rootMargin: "0px 0px 1px 0px",
-      threshold: 1.0,
-      root: endContentRef.current?.parentElement,
-    };
-
-    const observer = new IntersectionObserver(
-      (entries: IntersectionObserverEntry[]) => {
-        entries.forEach((entry: IntersectionObserverEntry) => {
-          if (entry.isIntersecting) {
-            if (entry.intersectionRatio > 0) {
-              onContentEndVisible();
-            }
-            observer.unobserve(entry.target);
-            observer.disconnect();
-          }
-        });
-      },
-      options,
-    );
-
-    if (endContentRef.current) {
-      observer.observe(endContentRef.current);
-    }
-
-    return () => {
-      observer.disconnect();
-    };
-  }, [onContentEndVisible]);
+  useObservation(endContentRef, onContentEndVisible);
 
   return (
     <HideOverFlow>
