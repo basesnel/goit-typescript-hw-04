@@ -1,8 +1,8 @@
-import { Item, ItemFlex, ItemText, List, Observer } from "@components";
+import { Item, ItemFlex, ItemText, List, ObserverV2 } from "@components";
 
-const Task01 = () => {
+const Task01v2 = () => {
   return (
-    <Observer>
+    <ObserverV2>
       <List message="There is no items">
         {[...Array(30)].map((_, i) => (
           <Item key={i}>
@@ -12,8 +12,8 @@ const Task01 = () => {
           </Item>
         ))}
       </List>
-    </Observer>
+    </ObserverV2>
   );
 };
 
-export { Task01 };
+export { Task01v2 };

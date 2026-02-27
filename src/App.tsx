@@ -1,5 +1,6 @@
 import { Card, Container, Grid, H, Main } from "@components";
-import { Task01 } from "./homeworks/Task01/Task01";
+import { Task01v2 } from "./homeworks/Task01v2/Task01v2";
+import { Task01v1 } from "./homeworks/Task01v1/Task01v1";
 
 const App = () => {
   return (
@@ -9,8 +10,11 @@ const App = () => {
       </Container>
       <Container>
         <Grid>
-          <Card title={<H level={2}>task 1</H>}>
-            <Task01 />
+          <Card title={<H level={2}>task 1 version 1</H>}>
+            <Task01v1 />
+          </Card>
+          <Card title={<H level={2}>task 1 version 2</H>}>
+            <Task01v2 />
           </Card>
           {[...Array(4)].map((_, i) => (
             <div

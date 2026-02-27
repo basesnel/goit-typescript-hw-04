@@ -1,28 +1,24 @@
 import { useState } from "react";
-import { Item, ItemFlex, ItemText, List, Observer } from "@components";
+import { Item, ItemFlex, ItemText, List, ObserverV1 } from "@components";
 
 import styles from "./styles.module.css";
 
-const Task01 = () => {
-  const [note, useNote] = useState<boolean>(false);
+const Task01v1 = () => {
+  const [notify, useNotify] = useState<boolean>(false);
 
   const { notification } = styles;
 
   return (
     <>
-      {note && (
-        <div className={notification}>
+      {notify && (
+        <div className={notification} onClick={() => useNotify(false)}>
           <span>End of list is reached</span>
         </div>
       )}
-      <Observer
+      <ObserverV1
         onContentEndVisible={() => {
-          useNote(true);
+          useNotify(true);
           console.log("End is in view.");
-        }}
-        onNoContentEndVisible={() => {
-          useNote(false);
-          console.log("End isn't in view.");
         }}
       >
         <List message="There is no items">
@@ -34,9 +30,9 @@ const Task01 = () => {
             </Item>
           ))}
         </List>
-      </Observer>
+      </ObserverV1>
     </>
   );
 };
 
-export { Task01 };
+export { Task01v1 };

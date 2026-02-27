@@ -13,26 +13,32 @@ type Options = {
 };
 
 // Опишіть Props
-const Observer = ({ children, onContentEndVisible }: Props) => {
+const ObserverV1 = ({ children, onContentEndVisible }: Props) => {
   // Вкажіть правильний тип для useRef зверніть увагу, в який DOM елемент ми його передаємо
   const endContentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     // Вкажіть правильний тип для options, підказка, клас також можна вказувати як тип
     const options: Options = {
-      rootMargin: "0px",
+      rootMargin: "0px 0px 1px 0px",
       threshold: 1.0,
       root: endContentRef.current?.parentElement,
     };
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.intersectionRatio > 0) {
-          onContentEndVisible();
-          observer.disconnect();
-        }
-      });
-    }, options);
+    const observer = new IntersectionObserver(
+      (entries: IntersectionObserverEntry[]) => {
+        entries.forEach((entry: IntersectionObserverEntry) => {
+          if (entry.isIntersecting) {
+            if (entry.intersectionRatio > 0) {
+              onContentEndVisible();
+              observer.unobserve(entry.target);
+              observer.disconnect();
+            }
+          }
+        });
+      },
+      options,
+    );
 
     if (endContentRef.current) {
       observer.observe(endContentRef.current);
@@ -51,4 +57,4 @@ const Observer = ({ children, onContentEndVisible }: Props) => {
   );
 };
 
-export default Observer;
+export default ObserverV1;

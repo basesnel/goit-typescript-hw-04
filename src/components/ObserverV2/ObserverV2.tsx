@@ -8,7 +8,7 @@ type Props = {
   children: React.ReactNode;
 };
 
-const Observer = (props: Props) => {
+const ObserverV2 = (props: Props) => {
   const { children } = props;
   const { wrapped, notification } = styles;
   const endContentRef = useRef<HTMLDivElement>(null);
@@ -29,4 +29,4 @@ const Observer = (props: Props) => {
   );
 };
 
-export default Observer;
+export default ObserverV2;
