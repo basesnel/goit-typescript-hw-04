@@ -1,79 +1,24 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef } from "react";
 import { HideOverFlow } from "@components";
+import { useObservation } from "./useObservation";
 
 import styles from "./styles.module.css";
 
 type Props = {
   children: React.ReactNode;
-  // onContentEndVisible: () => void;
-  // onNoContentEndVisible: () => void;
 };
 
-type Options = {
-  rootMargin: string;
-  threshold: number;
-  root: HTMLElement | null | undefined;
-};
-
-// Опишіть Props
-const Observer = ({
-  children,
-  // onContentEndVisible,
-  // onNoContentEndVisible,
-}: Props) => {
-  // Вкажіть правильний тип для useRef зверніть увагу, в який DOM елемент ми його передаємо
-  const endContentRef = useRef<HTMLDivElement>(null);
-
-  const [note, useNote] = useState<boolean>(false);
-
+const Observer = (props: Props) => {
+  const { children } = props;
   const { wrapped, notification } = styles;
-
-  useEffect(() => {
-    // Вкажіть правильний тип для options, підказка, клас також можна вказувати як тип
-    const options: Options = {
-      rootMargin: "0px 0px 1px 0px",
-      threshold: 0,
-      root: endContentRef.current?.parentElement,
-    };
-
-    const onContentEndVisible = () => {
-      useNote(true);
-      console.log("End is in view.");
-    };
-
-    const onNoContentEndVisible = () => {
-      useNote(false);
-      console.log("End isn't in view.");
-    };
-
-    const observerCollback = (entries: IntersectionObserverEntry[]) => {
-      entries.forEach((entry: IntersectionObserverEntry) => {
-        if (entry.isIntersecting) {
-          if (entry.intersectionRatio > 0) {
-            onContentEndVisible();
-          }
-        } else {
-          onNoContentEndVisible();
-        }
-      });
-    };
-
-    const observer = new IntersectionObserver(observerCollback, options);
-
-    if (endContentRef.current) {
-      observer.observe(endContentRef.current);
-    }
-
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
+  const endContentRef = useRef<HTMLDivElement>(null);
+  const notify = useObservation(endContentRef);
 
   return (
     <div className={wrapped}>
-      {note && (
+      {notify && (
         <div className={notification}>
-          <span>End of list is reached</span>
+          <span>There is an end of list.</span>
         </div>
       )}
       <HideOverFlow>
