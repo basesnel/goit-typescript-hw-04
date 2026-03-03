@@ -5,10 +5,18 @@ export function Task02() {
 
   return (
     <div>
-      <button onClick={startRequest}>Почати запит</button>
+      <button
+        onClick={startRequest}
+        disabled={
+          requestState.requestStep === "start" ||
+          requestState.requestStep === "pending"
+        }
+      >
+        Почати запит
+      </button>
       <button
         onClick={resetRequest}
-        disabled={!(requestState.requestStep === "start")}
+        disabled={requestState.requestStep !== "start"}
       >
         Скинути запит
       </button>
