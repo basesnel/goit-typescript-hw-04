@@ -18,6 +18,12 @@ const initialState: State = {
   requestStep: "idle",
 };
 
+type UseRequest = {
+  requestState: State;
+  startRequest: () => void;
+  resetRequest: () => void;
+};
+
 function requestReducer(state: State, action: Action): State {
   switch (action.type) {
     case "START_REQUEST":
@@ -33,7 +39,7 @@ function requestReducer(state: State, action: Action): State {
   }
 }
 
-const useRequestReducer = () => {
+const useRequestReducer = (): UseRequest => {
   const [requestState, requestDispatch] = useReducer(
     requestReducer,
     initialState,
