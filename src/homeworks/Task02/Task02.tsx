@@ -1,5 +1,12 @@
 import { useRequestReducer } from "./useRequestReducer";
 
+enum Status {
+  IDLE = "idle",
+  START = "start",
+  PENDING = "pending",
+  FINISHED = "finished",
+}
+
 export function Task02() {
   const { requestState, startRequest, resetRequest } = useRequestReducer();
 
@@ -8,15 +15,15 @@ export function Task02() {
       <button
         onClick={startRequest}
         disabled={
-          requestState.requestStep === "start" ||
-          requestState.requestStep === "pending"
+          requestState.requestStep === Status.START ||
+          requestState.requestStep === Status.PENDING
         }
       >
         Почати запит
       </button>
       <button
         onClick={resetRequest}
-        disabled={requestState.requestStep !== "start"}
+        disabled={requestState.requestStep !== Status.START}
       >
         Скинути запит
       </button>
