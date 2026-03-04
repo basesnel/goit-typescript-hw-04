@@ -1,0 +1,71 @@
+@value sizes: "../../cssvariables/media.module.css";
+@value smartphone-to from sizes;
+
+.flexed {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.nowrap {
+  flex-wrap: nowrap;
+}
+
+.wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.column-reverse {
+  flex-direction: column-reverse;
+}
+
+.stretch {
+  justify-content: space-around;
+  align-items: stretch;
+}
+
+.flex-start {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.flex-end {
+  align-items: flex-end;
+}
+
+.baseline {
+  justify-content: baseline;
+  align-items: baseline;
+}
+
+@media smartphone-to {
+  .stretch {
+    justify-content: space-around;
+    align-items: stretch;
+  }
+
+  .flex-start {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .flex-end {
+    align-items: flex-end;
+  }
+
+  .baseline {
+    justify-content: baseline;
+    align-items: baseline;
+  }
+}

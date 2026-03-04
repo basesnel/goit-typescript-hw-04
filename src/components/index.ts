@@ -1,5 +1,6 @@
 import Card from "./Card";
 import Container from "./Container";
+import FlexBox from "./FlexBox";
 import Grid from "./Grid";
 import H from "./H";
 import HideOverFlow from "./HideOverFlow";
@@ -14,6 +15,7 @@ import ObserverV2 from "./ObserverV2";
 export {
   Card,
   Container,
+  FlexBox,
   Grid,
   H,
   HideOverFlow,
