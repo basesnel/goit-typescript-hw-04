@@ -1,3 +1,4 @@
+import Button from "./Button";
 import Card from "./Card";
 import Container from "./Container";
 import FlexBox from "./FlexBox";
@@ -13,6 +14,7 @@ import ObserverV1 from "./ObserverV1";
 import ObserverV2 from "./ObserverV2";
 
 export {
+  Button,
   Card,
   Container,
   FlexBox,

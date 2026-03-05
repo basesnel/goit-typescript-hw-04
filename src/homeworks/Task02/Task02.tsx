@@ -1,4 +1,4 @@
-import { FlexBox } from "@components";
+import { Button, FlexBox } from "@components";
 import { useRequestReducer } from "./useRequestReducer";
 
 enum Status {
@@ -14,7 +14,7 @@ export function Task02() {
   return (
     <FlexBox direction="column-reverse">
       <FlexBox>
-        <button
+        <Button
           onClick={startRequest}
           disabled={
             requestState.requestStep === Status.START ||
@@ -22,13 +22,13 @@ export function Task02() {
           }
         >
           Почати запит
-        </button>
-        <button
+        </Button>
+        <Button
           onClick={resetRequest}
           disabled={requestState.requestStep !== Status.START}
         >
           Скинути запит
-        </button>
+        </Button>
       </FlexBox>
       <p>Стан запиту: {requestState.requestStep}</p>
     </FlexBox>

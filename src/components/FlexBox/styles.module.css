@@ -1,5 +1,5 @@
 @value sizes: "../../cssvariables/media.module.css";
-@value smartphone-to from sizes;
+@value smartphone from sizes;
 
 .flexed {
   display: flex;
@@ -11,14 +11,17 @@
 }
 
 .wrap {
+  composes: flexed;
   flex-wrap: wrap;
 }
 
 .nowrap {
+  composes: flexed;
   flex-wrap: nowrap;
 }
 
 .wrap-reverse {
+  composes: flexed;
   flex-wrap: wrap-reverse;
 }
 
@@ -49,7 +52,7 @@
   align-items: baseline;
 }
 
-@media smartphone-to {
+@media smartphone {
   .stretch {
     justify-content: space-around;
     align-items: stretch;

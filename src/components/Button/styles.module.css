@@ -1,0 +1,45 @@
+@value mediasizes: "../../cssvariables/media.module.css";
+@value fstexts: "../../cssvariables/fstext.module.css";
+@value color-text: "../../cssvariables/color.module.css";
+@value smartphone, tablet from mediasizes;
+@value fstext, fstext-smartphone from fstexts;
+@value color-text, color-accent, color-light from color-text;
+
+.button {
+  border: 1px solid color-text;
+  border-radius: 4px;
+  padding: 4px 20px;
+  font-size: fstext;
+  background-color: color-text;
+  color: color-light;
+  transition: var(--my-transition);
+}
+
+.button:hover:enabled,
+.button:active:enabled {
+  border: 1px solid color-accent;
+  background-color: color-accent;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+}
+
+.button:disabled {
+  opacity: 0.15;
+}
+
+.fullfilled {
+  composes: button;
+  width: 100%;
+}
+
+@media smartphone {
+  .button {
+    font-size: fstext-smartphone;
+  }
+}
+
+@media tablet {
+  .button {
+    padding: 6px 20px;
+  }
+}
