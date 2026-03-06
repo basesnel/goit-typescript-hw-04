@@ -1,4 +1,4 @@
-import { Button, FlexBox } from "@components";
+import { Button, Caption, FlexBox } from "@components";
 import { useRequestReducer } from "./useRequestReducer";
 
 enum Status {
@@ -30,7 +30,9 @@ export function Task02() {
           Скинути запит
         </Button>
       </FlexBox>
-      <p>Стан запиту: {requestState.requestStep}</p>
+      <Caption>
+        Стан запиту: <b>{requestState.requestStep}</b>
+      </Caption>
     </FlexBox>
   );
 }
