@@ -12,7 +12,11 @@ export function Task02() {
   const { requestState, startRequest, resetRequest } = useRequestReducer();
 
   return (
-    <FlexBox direction="column-reverse">
+    // <FlexBox direction="column-reverse">
+    <>
+      <Caption>
+        Стан запиту: <b>{requestState.requestStep}</b>
+      </Caption>
       <FlexBox>
         <Button
           onClick={startRequest}
@@ -30,10 +34,8 @@ export function Task02() {
           Скинути запит
         </Button>
       </FlexBox>
-      <Caption>
-        Стан запиту: <b>{requestState.requestStep}</b>
-      </Caption>
-    </FlexBox>
+    </>
+    // </FlexBox>
   );
 }
 

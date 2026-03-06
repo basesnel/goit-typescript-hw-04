@@ -6,11 +6,10 @@
 @value color-text from colors;
 
 .wrapper {
-  margin: 0 24px;
+  margin: 20px 24px;
   padding: 20px 40px;
   border: 1px solid color-text;
   border-radius: 10px;
-  text-align: center;
   font-size: fstext;
   word-break: break-all;
   color: color-text;
@@ -18,13 +17,12 @@
 
 @media smartphone {
   .wrapper {
-    font-size: text-smartphone;
+    font-size: fstext-smartphone;
   }
 }
 
 @media tablet {
   .wrapper {
     max-width: 400px;
-    margin: 0 auto;
   }
 }

@@ -6,9 +6,10 @@ type CaptionProps = {
 
 const Caption = (props: CaptionProps) => {
   const { children } = props;
+  const { wrapper } = styles;
 
   return (
-    <div className={styles.wrapper}>
+    <div className={wrapper}>
       <span>{children}</span>
     </div>
   );
