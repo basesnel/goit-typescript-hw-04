@@ -7,12 +7,10 @@ enum Status {
   PENDING = "pending",
   FINISHED = "finished",
 }
-
-export function Task02() {
+const Task02 = () => {
   const { requestState, startRequest, resetRequest } = useRequestReducer();
 
   return (
-    // <FlexBox direction="column-reverse">
     <>
       <Caption>
         Стан запиту: <b>{requestState.requestStep}</b>
@@ -35,8 +33,7 @@ export function Task02() {
         </Button>
       </FlexBox>
     </>
-    // </FlexBox>
   );
-}
+};
 
 export default Task02;

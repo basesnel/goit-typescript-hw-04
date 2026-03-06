@@ -1,7 +1,9 @@
+import type { ReactNode } from "react";
+
 import styles from "./styles.module.css";
 
 type CaptionProps = {
-  children: React.ReactNode;
+  children: ReactNode;
 };
 
 const Caption = (props: CaptionProps) => {
