@@ -2,6 +2,7 @@ import { Card, Container, Grid, H, Main } from "@components";
 import { Task01v2 } from "./homeworks/Task01v2/Task01v2";
 import { Task01v1 } from "./homeworks/Task01v1/Task01v1";
 import Task02 from "./homeworks/Task02/Task02";
+import Task03 from "./homeworks/Task03/Task03";
 
 const App = () => {
   return (
@@ -19,6 +20,9 @@ const App = () => {
           </Card>
           <Card title={<H level={2}>task 2</H>}>
             <Task02 />
+          </Card>
+          <Card title={<H level={2}>task 3</H>}>
+            <Task03 />
           </Card>
         </Grid>
       </Container>

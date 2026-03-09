@@ -1,0 +1,33 @@
+@value mediasizes: "../../cssvariables/media.module.css";
+@value fstexts: "../../cssvariables/fstext.module.css";
+@value colors: "../../cssvariables/color.module.css";
+@value mobile, smartphone, desktop from mediasizes;
+@value fstext, fstext-smartphone, fslabel, fslabel-mobile from fstexts;
+@value color-text, color-accent from colors;
+
+.input {
+  width: 100%;
+  padding: 4px 16px;
+  border-radius: 4px;
+  border: 1px solid color-text;
+  font-size: fstext;
+  color: color-text;
+  transition: var(--my-transition);
+}
+
+.input:hover:enabled,
+.input:focus:enabled {
+  color: color-accent;
+  border: 1px solid color-accent;
+}
+
+.input:disabled {
+  opacity: 0.15;
+}
+
+@media smartphone {
+  .input {
+    padding: 6px 24px;
+    font-size: fstext-smartphone;
+  }
+}
