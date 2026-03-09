@@ -1,6 +1,8 @@
+import type { ButtonHTMLAttributes } from "react";
+
 import styles from "./styles.module.css";
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   full?: boolean;
 }
 
