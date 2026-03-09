@@ -27,7 +27,7 @@
 
 .button:disabled {
   opacity: 0.15;
-  cursor: initial;
+  cursor: not-allowed;
 }
 
 .fullfilled {
