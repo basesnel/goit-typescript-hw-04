@@ -1,10 +1,9 @@
+import { Item, ItemFlex, ItemText, List } from "@components";
 import React, { createContext, useMemo, useState, useContext } from "react";
-// import noop from "lodash/noop";
 
 type MenuIds = "first" | "second" | "last";
 type Menu = { id: MenuIds; title: string };
 
-// Додати тип Menu Selected
 type SelectedMenu = { id?: MenuIds };
 
 type MenuSelected = { selectedMenu: SelectedMenu };
@@ -12,8 +11,6 @@ type MenuSelected = { selectedMenu: SelectedMenu };
 const MenuSelectedContext = createContext<MenuSelected>({
   selectedMenu: {},
 });
-
-// Додайте тип MenuAction
 
 type MenuAction = {
   onSelectedMenu: (selectedMenu: SelectedMenu) => void;
@@ -24,11 +21,10 @@ const MenuActionContext = createContext<MenuAction>({
 });
 
 type PropsProvider = {
-  children: React.ReactNode; // Додати тип для children
+  children: React.ReactNode;
 };
 
 function MenuProvider({ children }: PropsProvider) {
-  // Додати тип для SelectedMenu він повинен містити { id }
   const [selectedMenu, setSelectedMenu] = useState<SelectedMenu>({});
 
   const menuContextAction = useMemo(
@@ -63,14 +59,18 @@ function MenuComponent({ menus }: PropsMenu) {
   const { selectedMenu } = useContext(MenuSelectedContext);
 
   return (
-    <>
-      {menus.map((menu) => (
-        <div key={menu.id} onClick={() => onSelectedMenu({ id: menu.id })}>
-          {menu.title}{" "}
-          {selectedMenu.id === menu.id ? "Selected" : "Not selected"}
-        </div>
+    <List message="There is no items">
+      {menus.map(({ id, title }) => (
+        <Item key={id} onClick={() => onSelectedMenu({ id: id })}>
+          <ItemFlex spaceBetween>
+            <ItemText>{title}</ItemText>
+            <ItemText>
+              {selectedMenu.id === id ? "Selected" : "Not selected"}
+            </ItemText>
+          </ItemFlex>
+        </Item>
       ))}
-    </>
+    </List>
   );
 }
 

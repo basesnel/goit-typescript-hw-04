@@ -1,16 +1,13 @@
-import type { ReactNode } from "react";
+import type { LiHTMLAttributes } from "react";
 import styles from "./styles.module.css";
 
-type ItemProps = {
-  children: ReactNode | null;
-  delegated?: any;
-};
+interface ItemProps extends LiHTMLAttributes<HTMLLIElement> {}
 
 const Item = (props: ItemProps) => {
-  const { children, ...delegated } = props;
+  const { children, ...rest } = props;
 
   return (
-    <li className={styles.item} {...delegated}>
+    <li className={styles.item} {...rest}>
       {children}
     </li>
   );
