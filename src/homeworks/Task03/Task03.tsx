@@ -1,6 +1,6 @@
 import { useState } from "react";
 import type { ChangeEvent } from "react";
-import { Input } from "@components";
+import { Caption, Input } from "@components";
 
 const Task03 = () => {
   const [value, setValue] = useState<string>("");
@@ -11,12 +11,8 @@ const Task03 = () => {
     setNotify(getNotify(event.target.value));
   };
 
-  // const handleInput = (event: InputEvent<HTMLInputElement>) => {
-  //   setValue(event.target.value);
-  // };
-
   const getNotify = (value: string): string => {
-    const text = "The field change event typed correctly";
+    const text = "The event change is correctly typed";
 
     return text.substring(0, value.length);
   };
@@ -30,7 +26,9 @@ const Task03 = () => {
         placeholder="Type something..."
         onChange={handleChange}
       />
-      <p>{notify}</p>
+      <Caption>
+        Процес: <b>{notify}</b>
+      </Caption>{" "}
     </>
   );
 };
