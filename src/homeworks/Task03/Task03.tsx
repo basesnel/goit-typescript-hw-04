@@ -9,7 +9,15 @@ const Task03 = () => {
     setValue(event.target.value);
   };
 
-  return <Input type="text" value={value} onChange={handleChange} />;
+  return (
+    <Input
+      caption="Input field"
+      type="text"
+      value={value}
+      placeholder="Type something..."
+      onChange={handleChange}
+    />
+  );
 };
 
 export default Task03;

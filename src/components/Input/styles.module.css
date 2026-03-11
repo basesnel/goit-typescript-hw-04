@@ -1,35 +1,72 @@
 @value mediasizes: "../../cssvariables/media.module.css";
-@value fstexts: "../../cssvariables/fstext.module.css";
 @value colors: "../../cssvariables/color.module.css";
+@value smartphone from mediasizes;
 @value animations: "../../cssvariables/animation.module.css";
-@value mobile, smartphone, desktop from mediasizes;
-@value fstext, fstext-smartphone, fslabel, fslabel-mobile from fstexts;
-@value color-text, color-accent from colors;
+@value color-text, color-accent, color-text-opacity from colors;
 @value transition from animations;
+
+.label {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 10px;
+  max-width: 480px;
+  margin: 0 0 10px;
+  color: color-text;
+  cursor: pointer;
+  transition: transition;
+}
+
+.label:hover,
+.label:focus {
+  color: color-accent;
+}
+
+.label:last-child,
+.label:only-child {
+  margin: 0 0 0;
+}
 
 .input {
   width: 100%;
-  padding: 4px 12px;
+  padding: 4px 8px;
   border-radius: 4px;
   border: 1px solid color-text;
-  font-size: fstext;
   color: color-text;
   transition: transition;
 }
 
-.input:hover:enabled,
-.input:focus:enabled {
+.label:hover .input:not(:disabled),
+.label:focus .input:not(:disabled) {
   color: color-accent;
   border: 1px solid color-accent;
 }
 
 .input:disabled {
-  opacity: 0.15;
+  color: color-text-opacity;
+  border: 1px solid color-text-opacity;
+  cursor: not-allowed;
+}
+
+.span:has(+ .input:disabled) {
+  color: color-text-opacity;
+  cursor: not-allowed;
 }
 
 @media smartphone {
+  .label {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .span {
+    width: 33%;
+    text-align: right;
+  }
+
   .input {
-    padding: 6px 18px;
-    font-size: fstext-smartphone;
+    width: initial;
+    flex-grow: 1;
   }
 }
