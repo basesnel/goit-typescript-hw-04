@@ -26,9 +26,7 @@ const Task03 = () => {
         placeholder="Type something..."
         onChange={handleChange}
       />
-      <Caption>
-        Процес: <b>{notify}</b>
-      </Caption>{" "}
+      <Caption label="Процес" note={notify} />
     </>
   );
 };

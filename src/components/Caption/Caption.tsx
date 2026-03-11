@@ -1,18 +1,20 @@
-import type { ReactNode } from "react";
-
 import styles from "./styles.module.css";
 
 type CaptionProps = {
-  children: ReactNode;
+  label: string;
+  note: string;
 };
 
 const Caption = (props: CaptionProps) => {
-  const { children } = props;
-  const { wrapper } = styles;
+  const { label, note } = props;
+  const { notify, labelStyle, noteStyle } = styles;
 
   return (
-    <div className={wrapper}>
-      <span>{children}</span>
+    <div className={notify}>
+      <span className={labelStyle}>{label}:</span>
+      <span lang="en" className={noteStyle}>
+        {note}
+      </span>
     </div>
   );
 };

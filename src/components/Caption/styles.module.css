@@ -5,9 +5,12 @@
 @value fstext, fstext-smartphone from fstexts;
 @value color-text from colors;
 
-.wrapper {
+.notify {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
   margin: 20px 24px;
-  padding: 20px 40px;
+  padding: 20px;
   border: 1px solid color-text;
   border-radius: 10px;
   font-size: fstext;
@@ -15,14 +18,25 @@
   color: color-text;
 }
 
+.labelStyle {
+  min-width: 30%;
+  text-align: right;
+}
+
+.noteStyle {
+  font-weight: 700;
+  hyphens: manual;
+}
+
 @media smartphone {
-  .wrapper {
+  .notify {
+    flex-direction: row;
     font-size: fstext-smartphone;
   }
 }
 
 @media tablet {
-  .wrapper {
+  .notify {
     max-width: 400px;
   }
 }

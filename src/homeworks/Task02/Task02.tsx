@@ -12,9 +12,7 @@ const Task02 = () => {
 
   return (
     <>
-      <Caption>
-        Стан запиту: <b>{requestState.requestStep}</b>
-      </Caption>
+      <Caption label="Стан запиту" note={requestState.requestStep} />
       <FlexBox>
         <Button
           onClick={startRequest}
