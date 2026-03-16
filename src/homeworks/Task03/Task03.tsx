@@ -20,7 +20,7 @@ const Task03 = () => {
   return (
     <>
       <Input
-        caption="Input field"
+        label="Input field"
         type="text"
         value={value}
         placeholder="Type something..."

@@ -5,7 +5,7 @@
 @value color-text, color-accent, color-text-opacity from colors;
 @value transition from animations;
 
-.label {
+.field {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -18,27 +18,27 @@
   transition: transition;
 }
 
-.label:hover,
-.label:focus {
+.field:hover,
+.field:focus {
   color: color-accent;
 }
 
-.label:last-child,
-.label:only-child {
+.field:last-child,
+.field:only-child {
   margin: 0 0 0;
 }
 
 .input {
   width: 100%;
-  padding: 4px 8px;
+  padding: 8px;
   border-radius: 4px;
   border: 1px solid color-text;
   color: color-text;
   transition: transition;
 }
 
-.label:hover .input:not(:disabled),
-.label:focus .input:not(:disabled) {
+.field:hover .input:not(:disabled),
+.field:focus .input:not(:disabled) {
   color: color-accent;
   border: 1px solid color-accent;
 }
@@ -55,7 +55,7 @@
 }
 
 @media smartphone {
-  .label {
+  .field {
     flex-direction: row;
     align-items: center;
   }
