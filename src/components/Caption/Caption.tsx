@@ -1,9 +1,5 @@
+import type { CaptionProps } from "./type";
 import styles from "./styles.module.css";
-
-type CaptionProps = {
-  label: string;
-  note: string;
-};
 
 const Caption = (props: CaptionProps) => {
   const { label, note } = props;

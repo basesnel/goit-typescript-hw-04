@@ -1,10 +1,5 @@
-import type { ButtonHTMLAttributes } from "react";
-
+import type { ButtonProps } from "./type";
 import styles from "./styles.module.css";
-
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  full?: boolean;
-}
 
 const Button = (props: ButtonProps) => {
   const { children, full, ...rest } = props;

@@ -1,21 +1,17 @@
 import { cardContext } from "@contexts";
-
+import type { CardProps } from "./type";
 import styles from "./styles.module.css";
-
-type CardProps = {
-  title: React.ReactNode;
-  children: React.ReactNode;
-};
 
 const Card = (props: CardProps) => {
   const { title, children } = props;
+  const { card, header, content } = styles;
 
   return (
-    <div className={styles.card}>
-      <div className={styles.header}>
+    <div className={card}>
+      <div className={header}>
         <cardContext.Provider value={true}>{title}</cardContext.Provider>
       </div>
-      <div className={styles.content}>{children}</div>
+      <div className={content}>{children}</div>
     </div>
   );
 };
