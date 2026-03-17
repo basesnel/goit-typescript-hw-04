@@ -1,11 +1,5 @@
+import type { FlexBoxProps } from "@types";
 import styles from "./styles.module.css";
-
-type FlexBoxProps = {
-  direction?: "row-reverse" | "column" | "column-reverse";
-  align?: "stretch" | "flex-start" | "flex-end" | "baseline";
-  wrapped?: "wrap" | "nowrap" | "wrap-reverse";
-  children: React.ReactNode[];
-};
 
 const FlexBox = (props: FlexBoxProps) => {
   const { direction, align, wrapped, children } = props;

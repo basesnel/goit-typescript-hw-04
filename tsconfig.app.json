@@ -28,6 +28,7 @@
     "paths": {
       "@components": ["components/index.ts"],
       "@contexts": ["contexts/index.ts"],
+      "@types": ["types"],
       "@/*": ["*"]
     }
   },
