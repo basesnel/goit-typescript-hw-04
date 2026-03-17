@@ -52,6 +52,28 @@ type ItemFlexProps = {
   spaceBetween?: boolean;
 };
 
+type ItemTextProps = {
+  children: string | number;
+};
+
+type ListProps = {
+  message: string;
+  children: React.ReactNode[] | null;
+};
+
+type MainProps = {
+  children: ReactNode;
+};
+
+type ObserverV1Props = {
+  children: ReactNode;
+  onContentEndVisible: () => void;
+};
+
+type ObserverV2Props = {
+  children: ReactNode;
+};
+
 export type {
   ButtonProps,
   CaptionProps,
@@ -64,4 +86,9 @@ export type {
   InputProps,
   ItemProps,
   ItemFlexProps,
+  ItemTextProps,
+  ListProps,
+  MainProps,
+  ObserverV1Props,
+  ObserverV2Props,
 };

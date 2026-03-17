@@ -10,6 +10,11 @@ import type {
   InputProps,
   ItemProps,
   ItemFlexProps,
+  ItemTextProps,
+  ListProps,
+  MainProps,
+  ObserverV1Props,
+  ObserverV2Props,
 } from "./components";
 
 export type {
@@ -24,4 +29,9 @@ export type {
   InputProps,
   ItemProps,
   ItemFlexProps,
+  ItemTextProps,
+  ListProps,
+  MainProps,
+  ObserverV1Props,
+  ObserverV2Props,
 };

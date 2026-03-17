@@ -1,9 +1,5 @@
+import type { ListProps } from "@types";
 import styles from "./styles.module.css";
-
-type ListProps = {
-  message: string;
-  children: React.ReactNode[] | null;
-};
 
 const List = (props: ListProps) => {
   const { message, children } = props;

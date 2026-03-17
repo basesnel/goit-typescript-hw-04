@@ -1,10 +1,7 @@
+import type { ItemTextProps } from "@types";
 import styles from "./styles.module.css";
 
-type ItemText = {
-  children: string | number;
-};
-
-const ItemText = (props: ItemText) => {
+const ItemText = (props: ItemTextProps) => {
   const { children } = props;
 
   return <span className={styles.content}>{children}</span>;

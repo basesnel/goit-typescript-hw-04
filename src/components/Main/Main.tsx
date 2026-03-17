@@ -1,8 +1,5 @@
+import type { MainProps } from "@types";
 import { mainContext } from "@contexts";
-
-type MainProps = {
-  children: React.ReactNode;
-};
 
 const Main = (props: MainProps) => {
   const { children } = props;
