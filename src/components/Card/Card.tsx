@@ -1,5 +1,5 @@
+import type { CardProps } from "@types";
 import { cardContext } from "@contexts";
-import type { CardProps } from "./type";
 import styles from "./styles.module.css";
 
 const Card = (props: CardProps) => {

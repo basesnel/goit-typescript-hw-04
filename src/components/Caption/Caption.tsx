@@ -1,4 +1,4 @@
-import type { CaptionProps } from "./type";
+import type { CaptionProps } from "@types";
 import styles from "./styles.module.css";
 
 const Caption = (props: CaptionProps) => {

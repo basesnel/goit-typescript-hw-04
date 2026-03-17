@@ -1,3 +1,19 @@
+import type { ButtonHTMLAttributes } from "react";
+
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  full?: boolean;
+}
+
+type CaptionProps = {
+  label: string;
+  note: string;
+};
+
+type CardProps = {
+  title: React.ReactNode;
+  children: React.ReactNode;
+};
+
 type ContainerProps = {
   children: React.ReactNode;
 };
@@ -13,4 +29,11 @@ type GridProps = {
   children: React.ReactNode;
 };
 
-export type { ContainerProps, FlexBoxProps, GridProps };
+export type {
+  ButtonProps,
+  CaptionProps,
+  CardProps,
+  ContainerProps,
+  FlexBoxProps,
+  GridProps,
+};

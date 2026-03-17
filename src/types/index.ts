@@ -1,3 +1,17 @@
-import type { ContainerProps, FlexBoxProps, GridProps } from "./components";
+import type {
+  ButtonProps,
+  CaptionProps,
+  CardProps,
+  ContainerProps,
+  FlexBoxProps,
+  GridProps,
+} from "./components";
 
-export type { ContainerProps, FlexBoxProps, GridProps };
+export type {
+  ButtonProps,
+  CaptionProps,
+  CardProps,
+  ContainerProps,
+  FlexBoxProps,
+  GridProps,
+};
