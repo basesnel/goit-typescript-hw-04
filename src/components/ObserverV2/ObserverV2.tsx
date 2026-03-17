@@ -1,11 +1,11 @@
 import { useRef } from "react";
-import type { ObserverV2Props } from "@types";
+import type { ChildrenProps } from "@types";
 import { HideOverFlow } from "@components";
 import { useObservation } from "./useObservation";
 
 import styles from "./styles.module.css";
 
-const ObserverV2 = (props: ObserverV2Props) => {
+const ObserverV2 = (props: ChildrenProps) => {
   const { children } = props;
   const { wrapped, notification } = styles;
   const endContentRef = useRef<HTMLDivElement>(null);

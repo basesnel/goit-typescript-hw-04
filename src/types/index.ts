@@ -5,15 +5,12 @@ import type {
   ChildrenProps,
   FlexBoxProps,
   Hprops,
-  HideOverFlowProps,
   InputProps,
   ItemProps,
   ItemFlexProps,
   ItemTextProps,
   ListProps,
-  MainProps,
   ObserverV1Props,
-  ObserverV2Props,
 } from "./components";
 
 export type {
@@ -23,13 +20,10 @@ export type {
   ChildrenProps,
   FlexBoxProps,
   Hprops,
-  HideOverFlowProps,
   InputProps,
   ItemProps,
   ItemFlexProps,
   ItemTextProps,
   ListProps,
-  MainProps,
   ObserverV1Props,
-  ObserverV2Props,
 };

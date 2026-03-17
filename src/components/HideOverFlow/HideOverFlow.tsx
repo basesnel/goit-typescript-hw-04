@@ -1,7 +1,7 @@
-import type { HideOverFlowProps } from "@types";
+import type { ChildrenProps } from "@types";
 import styles from "./styles.module.css";
 
-const HideOverflow = (props: HideOverFlowProps) => {
+const HideOverflow = (props: ChildrenProps) => {
   const { children } = props;
   const { hideOverflow } = styles;
 

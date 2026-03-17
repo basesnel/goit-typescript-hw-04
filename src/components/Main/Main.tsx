@@ -1,7 +1,7 @@
-import type { MainProps } from "@types";
+import type { ChildrenProps } from "@types";
 import { mainContext } from "@contexts";
 
-const Main = (props: MainProps) => {
+const Main = (props: ChildrenProps) => {
   const { children } = props;
 
   return (

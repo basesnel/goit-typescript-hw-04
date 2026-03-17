@@ -33,10 +33,6 @@ type Hprops = {
   children: ReactNode;
 };
 
-type HideOverFlowProps = {
-  children: ReactNode;
-};
-
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   label?: string;
 }
@@ -57,17 +53,9 @@ type ListProps = {
   children: React.ReactNode[] | null;
 };
 
-type MainProps = {
-  children: ReactNode;
-};
-
 type ObserverV1Props = {
   children: ReactNode;
   onContentEndVisible: () => void;
-};
-
-type ObserverV2Props = {
-  children: ReactNode;
 };
 
 export type {
@@ -77,13 +65,10 @@ export type {
   ChildrenProps,
   FlexBoxProps,
   Hprops,
-  HideOverFlowProps,
   InputProps,
   ItemProps,
   ItemFlexProps,
   ItemTextProps,
   ListProps,
-  MainProps,
   ObserverV1Props,
-  ObserverV2Props,
 };
