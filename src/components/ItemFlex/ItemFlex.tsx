@@ -1,11 +1,5 @@
-import type { ReactNode } from "react";
-
+import type { ItemFlexProps } from "@types";
 import styles from "./styles.module.css";
-
-type ItemFlexProps = {
-  children: ReactNode;
-  spaceBetween?: boolean;
-};
 
 const ItemFlex = (props: ItemFlexProps) => {
   const { children, spaceBetween } = props;

@@ -1,7 +1,5 @@
-import type { LiHTMLAttributes } from "react";
+import type { ItemProps } from "@types";
 import styles from "./styles.module.css";
-
-interface ItemProps extends LiHTMLAttributes<HTMLLIElement> {}
 
 const Item = (props: ItemProps) => {
   const { children, ...rest } = props;

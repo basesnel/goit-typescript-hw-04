@@ -5,6 +5,11 @@ import type {
   ContainerProps,
   FlexBoxProps,
   GridProps,
+  Hprops,
+  HideOverFlowProps,
+  InputProps,
+  ItemProps,
+  ItemFlexProps,
 } from "./components";
 
 export type {
@@ -14,4 +19,9 @@ export type {
   ContainerProps,
   FlexBoxProps,
   GridProps,
+  Hprops,
+  HideOverFlowProps,
+  InputProps,
+  ItemProps,
+  ItemFlexProps,
 };

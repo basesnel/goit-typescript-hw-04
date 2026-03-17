@@ -1,12 +1,8 @@
+import type { Hprops } from "@types";
 import { useContext } from "react";
 import { cardContext, mainContext } from "@contexts";
 
 import styles from "./styles.module.css";
-
-type Hprops = {
-  level: number;
-  children: React.ReactNode;
-};
 
 const H = (props: Hprops) => {
   const { level, children } = props;
