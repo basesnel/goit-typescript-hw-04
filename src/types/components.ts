@@ -17,7 +17,7 @@ type CardProps = {
   children: ReactNode;
 };
 
-type ContainerProps = {
+type ChildrenProps = {
   children: ReactNode;
 };
 
@@ -26,10 +26,6 @@ type FlexBoxProps = {
   align?: "stretch" | "flex-start" | "flex-end" | "baseline";
   wrapped?: "wrap" | "nowrap" | "wrap-reverse";
   children: ReactNode[];
-};
-
-type GridProps = {
-  children: ReactNode;
 };
 
 type Hprops = {
@@ -78,9 +74,8 @@ export type {
   ButtonProps,
   CaptionProps,
   CardProps,
-  ContainerProps,
+  ChildrenProps,
   FlexBoxProps,
-  GridProps,
   Hprops,
   HideOverFlowProps,
   InputProps,

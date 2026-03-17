@@ -1,7 +1,7 @@
-import type { ContainerProps } from "@types";
+import type { ChildrenProps } from "@types";
 import styles from "./styles.module.css";
 
-const Container = (props: ContainerProps) => {
+const Container = (props: ChildrenProps) => {
   const { children } = props;
   const { container } = styles;
 

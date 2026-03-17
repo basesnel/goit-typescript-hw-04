@@ -1,7 +1,7 @@
-import type { GridProps } from "@types";
+import type { ChildrenProps } from "@types";
 import styles from "./styles.module.css";
 
-const Grid = (props: GridProps) => {
+const Grid = (props: ChildrenProps) => {
   const { children } = props;
 
   return <section className={styles.grid}>{children}</section>;
