@@ -3,6 +3,14 @@ import type { ButtonHTMLAttributes } from "react";
 import type { InputHTMLAttributes } from "react";
 import type { LiHTMLAttributes } from "react";
 
+type ChildrenProps = {
+  children: ReactNode;
+};
+
+type CardTitle = {
+  title: ReactNode;
+};
+
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   full?: boolean;
 }
@@ -12,26 +20,21 @@ type CaptionProps = {
   note: string;
 };
 
-type CardProps = {
-  title: ReactNode;
-  children: ReactNode;
-};
+type CardProps = CardTitle & ChildrenProps;
 
-type ChildrenProps = {
-  children: ReactNode;
-};
-
-type FlexBoxProps = {
+type FlexBox = {
   direction?: "row-reverse" | "column" | "column-reverse";
   align?: "stretch" | "flex-start" | "flex-end" | "baseline";
   wrapped?: "wrap" | "nowrap" | "wrap-reverse";
-  children: ReactNode[];
 };
 
-type Hprops = {
+type FlexBoxProps = FlexBox & ChildrenProps;
+
+type HLevel = {
   level: number;
-  children: ReactNode;
 };
+
+type Hprops = HLevel & ChildrenProps;
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   label?: string;
