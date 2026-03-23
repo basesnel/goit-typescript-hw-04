@@ -1,12 +1,7 @@
+import { Status } from "./types";
 import { Button, Caption, FlexBox } from "@components";
 import { useRequestReducer } from "./useRequestReducer";
 
-enum Status {
-  IDLE = "idle",
-  START = "start",
-  PENDING = "pending",
-  FINISHED = "finished",
-}
 const Task02 = () => {
   const { requestState, startRequest, resetRequest } = useRequestReducer();
 

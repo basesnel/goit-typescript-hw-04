@@ -9,4 +9,12 @@ type MenuAction = { onSelectedMenu: (selectedMenu: SelectedMenu) => void };
 
 type PropsMenu = { menus: Menu[] };
 
+// enum Status {
+//   IDLE = "idle",
+//   START = "start",
+//   PENDING = "pending",
+//   FINISHED = "finished",
+// }
+
 export type { Menu, MenuAction, MenuSelected, PropsMenu, SelectedMenu };
+// export { Status };
