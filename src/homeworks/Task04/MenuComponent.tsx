@@ -1,11 +1,10 @@
 import type { PropsMenu } from "@types";
 import { Item, ItemFlex, ItemText, List } from "@components";
 import { useContext } from "react";
-import { MenuActionContext } from "./MenuProvider";
-import { menuSelectedContext } from "@contexts";
+import { menuActionContext, menuSelectedContext } from "@contexts";
 
 const MenuComponent = ({ menus }: PropsMenu) => {
-  const { onSelectedMenu } = useContext(MenuActionContext);
+  const { onSelectedMenu } = useContext(menuActionContext);
   const { selectedMenu } = useContext(menuSelectedContext);
 
   return (
