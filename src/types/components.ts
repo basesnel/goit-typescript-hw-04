@@ -21,10 +21,7 @@ type Hprops = HLevel & ChildrenProps;
 type ItemFlexProps = ItemFlex & ChildrenProps;
 type ObserverV1Props = ObserverV1 & ChildrenProps;
 
-type CaptionProps = {
-  label: string;
-  note: string;
-};
+type CaptionProps = { label: string; note: string };
 
 type ItemTextProps = { children: string | number };
 

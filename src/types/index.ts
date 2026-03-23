@@ -13,6 +13,15 @@ import type {
   ObserverV1Props,
 } from "./components";
 
+import type {
+  Menu,
+  SelectedMenu,
+  MenuSelected,
+  MenuAction,
+  PropsProvider,
+  PropsMenu,
+} from "./homeworks";
+
 export type {
   ButtonProps,
   CaptionProps,
@@ -26,4 +35,10 @@ export type {
   ItemTextProps,
   ListProps,
   ObserverV1Props,
+  Menu,
+  SelectedMenu,
+  MenuSelected,
+  MenuAction,
+  PropsProvider,
+  PropsMenu,
 };
