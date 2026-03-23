@@ -23,4 +23,4 @@ const MenuComponent = ({ menus }: PropsMenu) => {
   );
 };
 
-export { MenuComponent };
+export default MenuComponent;

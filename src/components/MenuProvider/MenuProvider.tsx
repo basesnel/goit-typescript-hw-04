@@ -28,4 +28,4 @@ const MenuProvider = ({ children }: ChildrenProps) => {
   );
 };
 
-export { MenuProvider };
+export default MenuProvider;
