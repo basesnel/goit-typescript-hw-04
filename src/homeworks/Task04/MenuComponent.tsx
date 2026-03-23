@@ -1,11 +1,12 @@
 import type { PropsMenu } from "@types";
 import { Item, ItemFlex, ItemText, List } from "@components";
 import { useContext } from "react";
-import { MenuActionContext, MenuSelectedContext } from "./MenuProvider";
+import { MenuActionContext } from "./MenuProvider";
+import { menuSelectedContext } from "@contexts";
 
 const MenuComponent = ({ menus }: PropsMenu) => {
   const { onSelectedMenu } = useContext(MenuActionContext);
-  const { selectedMenu } = useContext(MenuSelectedContext);
+  const { selectedMenu } = useContext(menuSelectedContext);
 
   return (
     <List message="There is no items">

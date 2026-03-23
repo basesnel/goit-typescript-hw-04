@@ -1,4 +1,5 @@
-import { mainContext } from "./mainContext/mainContext";
-import { cardContext } from "./cardContext/cardContext";
+import { mainContext } from "./mainContext";
+import { cardContext } from "./cardContext";
+import { menuSelectedContext } from "./menuSelectedContext";
 
-export { mainContext, cardContext };
+export { mainContext, cardContext, menuSelectedContext };

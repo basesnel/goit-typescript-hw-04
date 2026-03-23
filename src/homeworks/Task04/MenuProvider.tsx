@@ -1,14 +1,6 @@
-import type {
-  MenuAction,
-  MenuSelected,
-  PropsProvider,
-  SelectedMenu,
-} from "@types";
+import type { MenuAction, PropsProvider, SelectedMenu } from "@types";
 import { createContext, useMemo, useState } from "react";
-
-const MenuSelectedContext = createContext<MenuSelected>({
-  selectedMenu: {},
-});
+import { menuSelectedContext } from "@contexts";
 
 const MenuActionContext = createContext<MenuAction>({
   onSelectedMenu: () => {},
@@ -33,11 +25,11 @@ const MenuProvider = ({ children }: PropsProvider) => {
 
   return (
     <MenuActionContext.Provider value={menuContextAction}>
-      <MenuSelectedContext.Provider value={menuContextSelected}>
+      <menuSelectedContext.Provider value={menuContextSelected}>
         {children}
-      </MenuSelectedContext.Provider>
+      </menuSelectedContext.Provider>
     </MenuActionContext.Provider>
   );
 };
 
-export { MenuProvider, MenuActionContext, MenuSelectedContext };
+export { MenuProvider, MenuActionContext };
