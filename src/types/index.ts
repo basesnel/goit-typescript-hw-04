@@ -18,7 +18,6 @@ import type {
   SelectedMenu,
   MenuSelected,
   MenuAction,
-  PropsProvider,
   PropsMenu,
 } from "./homeworks";
 
@@ -39,6 +38,5 @@ export type {
   SelectedMenu,
   MenuSelected,
   MenuAction,
-  PropsProvider,
   PropsMenu,
 };

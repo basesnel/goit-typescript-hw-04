@@ -1,8 +1,8 @@
-import type { PropsProvider, SelectedMenu } from "@types";
+import type { ChildrenProps, SelectedMenu } from "@types";
 import { useMemo, useState } from "react";
 import { menuActionContext, menuSelectedContext } from "@contexts";
 
-const MenuProvider = ({ children }: PropsProvider) => {
+const MenuProvider = ({ children }: ChildrenProps) => {
   const [selectedMenu, setSelectedMenu] = useState<SelectedMenu>({});
 
   const menuContextAction = useMemo(
