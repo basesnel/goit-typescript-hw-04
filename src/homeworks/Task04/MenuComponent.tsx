@@ -1,46 +1,7 @@
-import type {
-  MenuAction,
-  MenuSelected,
-  PropsMenu,
-  PropsProvider,
-  SelectedMenu,
-} from "@types";
+import type { PropsMenu } from "@types";
 import { Item, ItemFlex, ItemText, List } from "@components";
-import { createContext, useMemo, useState, useContext } from "react";
-
-const MenuSelectedContext = createContext<MenuSelected>({
-  selectedMenu: {},
-});
-
-const MenuActionContext = createContext<MenuAction>({
-  onSelectedMenu: () => {},
-});
-
-const MenuProvider = ({ children }: PropsProvider) => {
-  const [selectedMenu, setSelectedMenu] = useState<SelectedMenu>({});
-
-  const menuContextAction = useMemo(
-    () => ({
-      onSelectedMenu: setSelectedMenu,
-    }),
-    [],
-  );
-
-  const menuContextSelected = useMemo(
-    () => ({
-      selectedMenu,
-    }),
-    [selectedMenu],
-  );
-
-  return (
-    <MenuActionContext.Provider value={menuContextAction}>
-      <MenuSelectedContext.Provider value={menuContextSelected}>
-        {children}
-      </MenuSelectedContext.Provider>
-    </MenuActionContext.Provider>
-  );
-};
+import { useContext } from "react";
+import { MenuActionContext, MenuSelectedContext } from "./MenuProvider";
 
 const MenuComponent = ({ menus }: PropsMenu) => {
   const { onSelectedMenu } = useContext(MenuActionContext);
@@ -62,4 +23,4 @@ const MenuComponent = ({ menus }: PropsMenu) => {
   );
 };
 
-export { MenuComponent, MenuProvider };
+export { MenuComponent };

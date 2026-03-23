@@ -1,5 +1,6 @@
 import type { Menu } from "@types";
-import { MenuComponent, MenuProvider } from "./MenuComponent";
+import { MenuComponent } from "./MenuComponent";
+import { MenuProvider } from "./MenuProvider";
 
 const Task04 = () => {
   const menus: Menu[] = [
