@@ -1,0 +1,65 @@
+import type {
+  MenuAction,
+  MenuSelected,
+  PropsMenu,
+  PropsProvider,
+  SelectedMenu,
+} from "@types";
+import { Item, ItemFlex, ItemText, List } from "@components";
+import { createContext, useMemo, useState, useContext } from "react";
+
+const MenuSelectedContext = createContext<MenuSelected>({
+  selectedMenu: {},
+});
+
+const MenuActionContext = createContext<MenuAction>({
+  onSelectedMenu: () => {},
+});
+
+const MenuProvider = ({ children }: PropsProvider) => {
+  const [selectedMenu, setSelectedMenu] = useState<SelectedMenu>({});
+
+  const menuContextAction = useMemo(
+    () => ({
+      onSelectedMenu: setSelectedMenu,
+    }),
+    [],
+  );
+
+  const menuContextSelected = useMemo(
+    () => ({
+      selectedMenu,
+    }),
+    [selectedMenu],
+  );
+
+  return (
+    <MenuActionContext.Provider value={menuContextAction}>
+      <MenuSelectedContext.Provider value={menuContextSelected}>
+        {children}
+      </MenuSelectedContext.Provider>
+    </MenuActionContext.Provider>
+  );
+};
+
+const MenuComponent = ({ menus }: PropsMenu) => {
+  const { onSelectedMenu } = useContext(MenuActionContext);
+  const { selectedMenu } = useContext(MenuSelectedContext);
+
+  return (
+    <List message="There is no items">
+      {menus.map(({ id, title }) => (
+        <Item key={id} onClick={() => onSelectedMenu({ id: id })}>
+          <ItemFlex spaceBetween>
+            <ItemText>{title}</ItemText>
+            <ItemText>
+              {selectedMenu.id === id ? "Selected" : "Not selected"}
+            </ItemText>
+          </ItemFlex>
+        </Item>
+      ))}
+    </List>
+  );
+};
+
+export { MenuComponent, MenuProvider };
