@@ -23,7 +23,10 @@ import type {
 
 import { Status } from "./homeworks";
 
+import type { Action, Options, State, UseRequest } from "./hooks";
+
 export type {
+  Action,
   ButtonProps,
   CaptionProps,
   CardProps,
@@ -35,12 +38,15 @@ export type {
   ItemFlexProps,
   ItemTextProps,
   ListProps,
-  ObserverV1Props,
   Menu,
-  SelectedMenu,
-  MenuSelected,
   MenuAction,
+  MenuSelected,
+  ObserverV1Props,
+  Options,
   PropsMenu,
+  SelectedMenu,
+  State,
+  UseRequest,
 };
 
 export { Status };

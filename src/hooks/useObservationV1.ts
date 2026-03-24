@@ -1,10 +1,5 @@
 import { useEffect, type RefObject } from "react";
-
-type Options = {
-  rootMargin: string;
-  threshold: number;
-  root: HTMLElement | null | undefined;
-};
+import type { Options } from "@tstypes";
 
 const useObservationV1 = (
   target: RefObject<HTMLDivElement | null>,

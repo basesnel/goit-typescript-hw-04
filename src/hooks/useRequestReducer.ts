@@ -1,27 +1,9 @@
+import type { Action, State, UseRequest } from "@tstypes";
 import { useReducer, useRef } from "react";
-
-type State = {
-  isRequestInProgress: boolean;
-  requestStep: "start" | "pending" | "finished" | "idle";
-};
-
-type Action = {
-  type:
-    | "START_REQUEST"
-    | "PENDING_REQUEST"
-    | "FINISH_REQUEST"
-    | "RESET_REQUEST";
-};
 
 const initialState: State = {
   isRequestInProgress: false,
   requestStep: "idle",
-};
-
-type UseRequest = {
-  requestState: State;
-  startRequest: () => void;
-  resetRequest: () => void;
 };
 
 const requestReducer = (state: State, action: Action): State => {
