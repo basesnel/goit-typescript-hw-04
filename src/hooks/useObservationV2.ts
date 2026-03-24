@@ -6,7 +6,9 @@ type Options = {
   root: HTMLElement | null | undefined;
 };
 
-const useObservation = (target: RefObject<HTMLDivElement | null>): boolean => {
+const useObservationV2 = (
+  target: RefObject<HTMLDivElement | null>,
+): boolean => {
   const [notify, useNotify] = useState<boolean>(false);
 
   useEffect(() => {
@@ -52,4 +54,4 @@ const useObservation = (target: RefObject<HTMLDivElement | null>): boolean => {
   return notify;
 };
 
-export { useObservation };
+export { useObservationV2 };

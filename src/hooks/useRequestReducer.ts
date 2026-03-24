@@ -24,7 +24,7 @@ type UseRequest = {
   resetRequest: () => void;
 };
 
-function requestReducer(state: State, action: Action): State {
+const requestReducer = (state: State, action: Action): State => {
   switch (action.type) {
     case "START_REQUEST":
       return { ...state, isRequestInProgress: true, requestStep: "start" };
@@ -37,7 +37,7 @@ function requestReducer(state: State, action: Action): State {
     default:
       return state;
   }
-}
+};
 
 const useRequestReducer = (): UseRequest => {
   const [requestState, requestDispatch] = useReducer(

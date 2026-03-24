@@ -1,6 +1,6 @@
 import { Status } from "@tstypes";
 import { Button, Caption, FlexBox } from "@components";
-import { useRequestReducer } from "./useRequestReducer";
+import { useRequestReducer } from "@hooks";
 
 const Task02 = () => {
   const { requestState, startRequest, resetRequest } = useRequestReducer();

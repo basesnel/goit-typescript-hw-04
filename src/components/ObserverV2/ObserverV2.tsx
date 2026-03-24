@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import type { ChildrenProps } from "@tstypes";
 import { HideOverFlow } from "@components";
-import { useObservation } from "./useObservation";
+import { useObservationV2 } from "@hooks";
 
 import styles from "./styles.module.css";
 
@@ -9,7 +9,7 @@ const ObserverV2 = (props: ChildrenProps) => {
   const { children } = props;
   const { wrapped, notification } = styles;
   const endContentRef = useRef<HTMLDivElement>(null);
-  const notify = useObservation(endContentRef);
+  const notify = useObservationV2(endContentRef);
 
   return (
     <div className={wrapped}>

@@ -29,6 +29,7 @@
       "@components": ["components/index.ts"],
       "@contexts": ["contexts/index.ts"],
       "@tstypes": ["tstypes"],
+      "@hooks": ["hooks"],
       "@/*": ["*"]
     }
   },

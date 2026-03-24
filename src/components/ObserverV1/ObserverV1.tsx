@@ -1,12 +1,12 @@
 import { useRef } from "react";
 import type { ObserverV1Props } from "@tstypes";
 import { HideOverFlow } from "@components";
-import { useObservation } from "./useObservation";
+import { useObservationV1 } from "@hooks";
 
 const ObserverV1 = ({ children, onContentEndVisible }: ObserverV1Props) => {
   const endContentRef = useRef<HTMLDivElement>(null);
 
-  useObservation(endContentRef, onContentEndVisible);
+  useObservationV1(endContentRef, onContentEndVisible);
 
   return (
     <HideOverFlow>

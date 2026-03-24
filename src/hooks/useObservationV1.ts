@@ -6,7 +6,7 @@ type Options = {
   root: HTMLElement | null | undefined;
 };
 
-const useObservation = (
+const useObservationV1 = (
   target: RefObject<HTMLDivElement | null>,
   onContentEndVisible: () => void,
 ) => {
@@ -41,4 +41,4 @@ const useObservation = (
   }, [onContentEndVisible]);
 };
 
-export { useObservation };
+export { useObservationV1 };
