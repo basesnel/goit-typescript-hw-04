@@ -1,4 +1,5 @@
 import type { Action, State, UseRequest } from "@tstypes";
+import { Request, Status } from "@tstypes";
 import { useReducer, useRef } from "react";
 
 const initialState: State = {
@@ -8,14 +9,22 @@ const initialState: State = {
 
 const requestReducer = (state: State, action: Action): State => {
   switch (action.type) {
-    case "START_REQUEST":
-      return { ...state, isRequestInProgress: true, requestStep: "start" };
-    case "PENDING_REQUEST":
-      return { ...state, isRequestInProgress: true, requestStep: "pending" };
-    case "FINISH_REQUEST":
-      return { ...state, isRequestInProgress: false, requestStep: "finished" };
-    case "RESET_REQUEST":
-      return { ...state, isRequestInProgress: false, requestStep: "idle" };
+    case Request.START:
+      return { ...state, isRequestInProgress: true, requestStep: Status.START };
+    case Request.PENDING:
+      return {
+        ...state,
+        isRequestInProgress: true,
+        requestStep: Status.PENDING,
+      };
+    case Request.FINISH:
+      return {
+        ...state,
+        isRequestInProgress: false,
+        requestStep: Status.FINISHED,
+      };
+    case Request.RESET:
+      return { ...state, isRequestInProgress: false, requestStep: Status.IDLE };
     default:
       return state;
   }
@@ -30,11 +39,11 @@ const useRequestReducer = (): UseRequest => {
   const timerID = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
 
   const startRequest = (): void => {
-    requestDispatch({ type: "START_REQUEST" });
+    requestDispatch({ type: Request.START });
     timerID.current = setTimeout(() => {
-      requestDispatch({ type: "PENDING_REQUEST" });
+      requestDispatch({ type: Request.PENDING });
       setTimeout(() => {
-        requestDispatch({ type: "FINISH_REQUEST" });
+        requestDispatch({ type: Request.FINISH });
         clearTimeout(timerID.current);
         timerID.current = undefined;
       }, 2000);
@@ -42,9 +51,9 @@ const useRequestReducer = (): UseRequest => {
   };
 
   const resetRequest = (): void => {
-    if (requestState.requestStep === "start") {
+    if (requestState.requestStep === Status.START) {
       clearTimeout(timerID.current);
-      requestDispatch({ type: "RESET_REQUEST" });
+      requestDispatch({ type: Request.RESET });
     }
   };
 

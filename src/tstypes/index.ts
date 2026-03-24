@@ -25,6 +25,8 @@ import { Status } from "./homeworks";
 
 import type { Action, Options, State, UseRequest } from "./hooks";
 
+import { Request } from "./hooks";
+
 export type {
   Action,
   ButtonProps,
@@ -49,4 +51,4 @@ export type {
   UseRequest,
 };
 
-export { Status };
+export { Request, Status };

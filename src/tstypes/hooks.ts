@@ -1,9 +1,12 @@
+enum Request {
+  START = "START_REQUEST",
+  PENDING = "PENDING_REQUEST",
+  FINISH = "FINISH_REQUEST",
+  RESET = "RESET_REQUEST",
+}
+
 type Action = {
-  type:
-    | "START_REQUEST"
-    | "PENDING_REQUEST"
-    | "FINISH_REQUEST"
-    | "RESET_REQUEST";
+  type: Request.START | Request.PENDING | Request.FINISH | Request.RESET;
 };
 
 type Options = {
@@ -24,3 +27,4 @@ type UseRequest = {
 };
 
 export type { Action, Options, State, UseRequest };
+export { Request };

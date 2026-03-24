@@ -9,7 +9,7 @@ type MenuAction = { onSelectedMenu: (selectedMenu: SelectedMenu) => void };
 
 type PropsMenu = { menus: Menu[] };
 
-const enum Status {
+enum Status {
   IDLE = "idle",
   START = "start",
   PENDING = "pending",
