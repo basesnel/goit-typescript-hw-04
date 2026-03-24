@@ -21,6 +21,8 @@ import type {
   PropsMenu,
 } from "./homeworks";
 
+import { Status } from "./homeworks";
+
 export type {
   ButtonProps,
   CaptionProps,
@@ -40,3 +42,5 @@ export type {
   MenuAction,
   PropsMenu,
 };
+
+export { Status };

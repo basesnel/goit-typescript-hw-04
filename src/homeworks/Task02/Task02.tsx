@@ -1,4 +1,4 @@
-import { Status } from "./types";
+import { Status } from "@tstypes";
 import { Button, Caption, FlexBox } from "@components";
 import { useRequestReducer } from "./useRequestReducer";
 
