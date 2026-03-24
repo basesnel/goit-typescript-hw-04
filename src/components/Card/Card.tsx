@@ -1,4 +1,4 @@
-import type { CardProps } from "@types";
+import type { CardProps } from "@tstypes";
 import { cardContext } from "@contexts";
 import styles from "./styles.module.css";
 

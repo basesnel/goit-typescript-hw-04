@@ -1,4 +1,4 @@
-import type { ChildrenProps } from "@types";
+import type { ChildrenProps } from "@tstypes";
 import { mainContext } from "@contexts";
 
 const Main = (props: ChildrenProps) => {

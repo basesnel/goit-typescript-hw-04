@@ -1,4 +1,4 @@
-import type { InputProps } from "@types";
+import type { InputProps } from "@tstypes";
 import styles from "./styles.module.css";
 
 const Input = (props: InputProps) => {

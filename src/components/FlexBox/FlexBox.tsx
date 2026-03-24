@@ -1,4 +1,4 @@
-import type { FlexBoxProps } from "@types";
+import type { FlexBoxProps } from "@tstypes";
 import styles from "./styles.module.css";
 
 const FlexBox = (props: FlexBoxProps) => {

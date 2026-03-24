@@ -1,4 +1,4 @@
-import type { ItemTextProps } from "@types";
+import type { ItemTextProps } from "@tstypes";
 import styles from "./styles.module.css";
 
 const ItemText = (props: ItemTextProps) => {

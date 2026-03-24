@@ -1,4 +1,4 @@
-import type { ListProps } from "@types";
+import type { ListProps } from "@tstypes";
 import styles from "./styles.module.css";
 
 const List = (props: ListProps) => {

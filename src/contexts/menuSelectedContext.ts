@@ -1,4 +1,4 @@
-import type { MenuSelected } from "@types";
+import type { MenuSelected } from "@tstypes";
 import { createContext } from "react";
 
 const menuSelectedContext = createContext<MenuSelected>({

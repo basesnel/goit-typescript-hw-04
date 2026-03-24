@@ -1,4 +1,4 @@
-import type { ItemProps } from "@types";
+import type { ItemProps } from "@tstypes";
 import styles from "./styles.module.css";
 
 const Item = (props: ItemProps) => {

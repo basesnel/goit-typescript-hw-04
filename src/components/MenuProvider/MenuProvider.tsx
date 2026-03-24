@@ -1,4 +1,4 @@
-import type { ChildrenProps, SelectedMenu } from "@types";
+import type { ChildrenProps, SelectedMenu } from "@tstypes";
 import { useMemo, useState } from "react";
 import { menuActionContext, menuSelectedContext } from "@contexts";
 

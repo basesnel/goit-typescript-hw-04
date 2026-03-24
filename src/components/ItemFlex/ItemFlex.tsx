@@ -1,4 +1,4 @@
-import type { ItemFlexProps } from "@types";
+import type { ItemFlexProps } from "@tstypes";
 import styles from "./styles.module.css";
 
 const ItemFlex = (props: ItemFlexProps) => {

@@ -1,4 +1,4 @@
-import type { PropsMenu } from "@types";
+import type { PropsMenu } from "@tstypes";
 import { Item, ItemFlex, ItemText, List } from "@components";
 import { useContext } from "react";
 import { menuActionContext, menuSelectedContext } from "@contexts";

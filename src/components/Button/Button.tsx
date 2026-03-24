@@ -1,4 +1,4 @@
-import type { ButtonProps } from "@types";
+import type { ButtonProps } from "@tstypes";
 import styles from "./styles.module.css";
 
 const Button = (props: ButtonProps) => {

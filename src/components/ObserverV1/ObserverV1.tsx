@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import type { ObserverV1Props } from "@types";
+import type { ObserverV1Props } from "@tstypes";
 import { HideOverFlow } from "@components";
 import { useObservation } from "./useObservation";
 

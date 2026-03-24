@@ -1,4 +1,4 @@
-import type { ChildrenProps } from "@types";
+import type { ChildrenProps } from "@tstypes";
 import styles from "./styles.module.css";
 
 const HideOverflow = (props: ChildrenProps) => {

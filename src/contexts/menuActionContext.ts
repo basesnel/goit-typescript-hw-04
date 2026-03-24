@@ -1,4 +1,4 @@
-import type { MenuAction } from "@types";
+import type { MenuAction } from "@tstypes";
 import { createContext } from "react";
 
 const menuActionContext = createContext<MenuAction>({

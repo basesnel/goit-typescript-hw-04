@@ -1,4 +1,4 @@
-import type { Hprops } from "@types";
+import type { Hprops } from "@tstypes";
 import { useContext } from "react";
 import { cardContext, mainContext } from "@contexts";
 
