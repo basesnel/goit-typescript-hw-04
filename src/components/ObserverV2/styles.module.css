@@ -21,8 +21,8 @@
   border-radius: 10px;
   font-size: fstext;
   text-align: center;
-  background-color: color-light;
-  color: color-dark;
+  background-color: color-dark;
+  color: color-light;
   opacity: 0.8;
 }
 @media smartphone {
