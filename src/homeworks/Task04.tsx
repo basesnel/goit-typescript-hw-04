@@ -24,4 +24,4 @@ const Task04 = () => {
   );
 };
 
-export default Task04;
+export { Task04 };

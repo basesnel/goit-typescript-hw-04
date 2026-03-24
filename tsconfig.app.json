@@ -30,6 +30,7 @@
       "@contexts": ["contexts/index.ts"],
       "@tstypes": ["tstypes"],
       "@hooks": ["hooks"],
+      "@homeworks": ["homeworks"],
       "@/*": ["*"]
     }
   },

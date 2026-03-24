@@ -12,6 +12,7 @@ export default defineConfig({
       "@contexts": path.resolve(__dirname, "src/contexts"),
       "@tstypes": path.resolve(__dirname, "src/tstypes"),
       "@hooks": path.resolve(__dirname, "src/hooks"),
+      "@homeworks": path.resolve(__dirname, "src/homeworks"),
     },
   },
 });

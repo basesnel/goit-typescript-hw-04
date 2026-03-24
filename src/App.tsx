@@ -1,9 +1,5 @@
 import { Card, Container, Grid, H, Main } from "@components";
-import { Task01v2 } from "./homeworks/Task01v2/Task01v2";
-import { Task01v1 } from "./homeworks/Task01v1/Task01v1";
-import Task02 from "./homeworks/Task02/Task02";
-import Task03 from "./homeworks/Task03/Task03";
-import Task04 from "./homeworks/Task04/Task04";
+import { Task01v1, Task01v2, Task02, Task03, Task04 } from "@homeworks";
 
 const App = () => {
   return (

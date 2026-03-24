@@ -31,4 +31,4 @@ const Task03 = () => {
   );
 };
 
-export default Task03;
+export { Task03 };
