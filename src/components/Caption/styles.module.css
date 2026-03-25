@@ -1,9 +1,9 @@
-@value sizes: "../../cssvariables/media.module.css";
-@value fstexts: "../../cssvariables/fstext.module.css";
-@value colors: "../../cssvariables/color.module.css";
-@value mobile, smartphone, tablet from sizes;
-@value fstext, fstext-smartphone from fstexts;
+@value colors: "../../cssvalues/colors.css";
 @value color-text from colors;
+@value fstexts: "../../cssvalues/fstexts.css";
+@value fstext, fstext-smartphone from fstexts;
+@value medias: "../../cssvalues/medias.css";
+@value mobile, smartphone, tablet from medias;
 
 .notify {
   display: flex;
