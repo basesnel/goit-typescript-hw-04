@@ -1,5 +1,4 @@
-@value sizes: "../../cssvariables/media.module.css";
-@value smartphone from sizes;
+@value smartphone from "../../cssvalues/medias.css";
 
 .flexed {
   display: flex;

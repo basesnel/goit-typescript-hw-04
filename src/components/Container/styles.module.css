@@ -1,5 +1,4 @@
-@value sizes: "../../cssvariables/media.module.css";
-@value mobile, smartphone, tablet, desktop from sizes;
+@value mobile, smartphone, tablet, desktop from "../../cssvalues/medias.css";
 
 .container {
   margin: 0 auto 20px;

@@ -1,5 +1,4 @@
-@value sizes: "../../cssvariables/media.module.css";
-@value tablet, desktop from sizes;
+@value tablet, desktop from "../../cssvalues/medias.css";
 
 .grid {
   display: grid;
