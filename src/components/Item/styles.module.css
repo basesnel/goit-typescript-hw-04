@@ -1,7 +1,5 @@
-@value colors: "../../cssvariables/color.module.css";
-@value animations: "../../cssvariables/animation.module.css";
-@value color-light, color-logo-light, color-accent-bg from colors;
-@value transition from animations;
+@value transition from "../../cssvalues/animations.css";
+@value color-light, color-logo-light, color-accent-bg from "../../cssvalues/colors.css";
 
 .item {
   transition: transition;
