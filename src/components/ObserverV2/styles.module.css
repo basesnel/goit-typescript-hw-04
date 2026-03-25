@@ -1,9 +1,6 @@
-@value sizes: "../../cssvariables/media.module.css";
-@value fstexts: "../../cssvariables/fstext.module.css";
-@value colors: "../../cssvariables/color.module.css";
-@value smartphone from sizes;
-@value color-dark, color-light from colors;
-@value fstext, fstext-smartphone from fstexts;
+@value color-dark, color-light from "../../cssvalues/colors.css";
+@value fstext, fstext-smartphone from "../../cssvalues/fstexts.css";
+@value smartphone from "../../cssvalues/medias.css";
 
 .wrapped {
   position: relative;

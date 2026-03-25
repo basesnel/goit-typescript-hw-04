@@ -1,5 +1,4 @@
-@value colors: "../../cssvariables/color.module.css";
-@value color-text from colors;
+@value color-text from "../../cssvalues/colors.css";
 
 .list {
   display: flex;
