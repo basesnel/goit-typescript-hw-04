@@ -1,11 +1,7 @@
-@value animations: "../../cssvalues/animations.css";
-@value transition from animations;
-@value colors: "../../cssvalues/colors.css";
-@value color-text, color-accent, color-light from colors;
-@value fstexts: "../../cssvalues/fstexts.css";
-@value fstext, fstext-smartphone from fstexts;
-@value medias: "../../cssvalues/medias.css";
-@value smartphone, tablet from medias;
+@value transition from "../../cssvalues/animations.css";
+@value color-text, color-accent, color-light from "../../cssvalues/colors.css";
+@value fstext, fstext-smartphone from "../../cssvalues/fstexts.css";
+@value smartphone, tablet from "../../cssvalues/medias.css";
 
 .button {
   border: 1px solid color-text;

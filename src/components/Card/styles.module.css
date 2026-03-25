@@ -1,7 +1,5 @@
-@value colors: "../../cssvariables/color.module.css";
-@value animations: "../../cssvariables/animation.module.css";
-@value color-text, color-logo-light from colors;
-@value transition from animations;
+@value transition from "../../cssvalues/animations.css";
+@value color-text, color-logo-light from "../../cssvalues/colors.css";
 
 .card {
   position: relative;
