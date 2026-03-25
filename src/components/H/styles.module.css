@@ -1,16 +1,12 @@
-@value mediasizes: "../../cssvariables/media.module.css";
-@value fsheadings: "../../cssvariables/fsheading.module.css";
-@value fstexts: "../../cssvariables/fstext.module.css";
-@value colors: "../../cssvariables/color.module.css";
-@value mobile, smartphone, tablet, desktop from mediasizes;
-@value heading1, heading1-mobile, heading1-smartphone, heading1-tablet, heading1-desktop from fsheadings;
-@value heading2, heading2-mobile, heading2-smartphone, heading2-tablet, heading2-desktop from fsheadings;
-@value heading3, heading3-mobile, heading3-smartphone, heading3-tablet, heading3-desktop from fsheadings;
-@value heading4, heading4-mobile, heading4-smartphone, heading4-tablet, heading4-desktop from fsheadings;
-@value heading5, heading5-mobile, heading5-smartphone, heading5-tablet, heading5-desktop from fsheadings;
-@value heading6, heading6-mobile, heading6-smartphone, heading6-tablet, heading6-desktop from fsheadings;
-@value fstext, fstext-smartphone from fstexts;
-@value color-text, color-dark from colors;
+@value color-text, color-dark from "../../cssvalues/colors.css";
+@value heading1, heading1-mobile, heading1-smartphone, heading1-tablet, heading1-desktop from "../../cssvalues/fsheadings.css";
+@value heading2, heading2-mobile, heading2-smartphone, heading2-tablet, heading2-desktop from "../../cssvalues/fsheadings.css";
+@value heading3, heading3-mobile, heading3-smartphone, heading3-tablet, heading3-desktop from "../../cssvalues/fsheadings.css";
+@value heading4, heading4-mobile, heading4-smartphone, heading4-tablet, heading4-desktop from "../../cssvalues/fsheadings.css";
+@value heading5, heading5-mobile, heading5-smartphone, heading5-tablet, heading5-desktop from "../../cssvalues/fsheadings.css";
+@value heading6, heading6-mobile, heading6-smartphone, heading6-tablet, heading6-desktop from "../../cssvalues/fsheadings.css";
+@value fstext, fstext-smartphone from "../../cssvalues/fstexts.css";
+@value mobile, smartphone, tablet, desktop from "../../cssvalues/medias.css";
 
 .heading {
   color: color-dark;
